@@ -1,17 +1,18 @@
 .container {
   text-align: left;
-  margin: 0 50px;
+  padding: 0 50px;
+  background-color: floralwhite;
 }
 
 @media (min-width: 1024px) {
   .container {
-    margin: 0 200px;
+    padding: 0 200px;
   }
 }
 
 @media (min-width: 1920px) {
   .container {
-    margin: 0 400px;
+    padding: 0 400px;
   }
 }
 
@@ -47,4 +48,26 @@
 
 .section-title {
   color: #e64d57;
+}
+
+.paragraph,
+.listItem {
+  line-height: 22px;
+  color: #302f2f;
+}
+
+.listItem>span {
+  display: inline-block;
+  line-height: 25px;
+}
+
+.listItem>span>img {
+  height: 14px;
+  width: 16px;
+  margin-right: 10px;
+}
+
+.link {
+  text-decoration: none;
+  color: darkred;
 }
