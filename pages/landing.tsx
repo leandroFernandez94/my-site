@@ -14,7 +14,7 @@ const Landing: NextPage = () => (
       </div>
     </header>
     <main className="main-content bg-dark-blue">
-    <h3 className="section-title">About me</h3>
+    <h3 className="section-title">Hello World!</h3>
           I started coding in high school and never stopped since then. I have a 
           fullstack background, with most of my experience being related to frontend technologies, I have been working with
           React + Node.js stacks for a long time(5+ years) building web apps.
