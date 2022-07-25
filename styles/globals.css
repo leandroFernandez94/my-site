@@ -4,7 +4,6 @@
   --red: #e84250;
   --rose: #e31b6d;
   --white: white;
-  --olive: #DBE8D4;
   --green: #00feba;
   --yellow: #F4D06F;
   --almond: #7a7673;
@@ -20,7 +19,7 @@ body {
   margin: 0;
   height: 100vh;
   font-family: 'Nunito', sans-serif;
-  color: var(--olive);
+  color: var(--white);
 }
 
 .bg-dark-blue {
