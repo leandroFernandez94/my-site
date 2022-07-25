@@ -25,12 +25,16 @@
 
 
     .codeTyper {
-      font-size: clamp(1rem, 3vw + 1rem, 4rem);
+      font-size: clamp(1rem, 1vw + 1rem, 2rem);
       position: relative;
       font-family: monospace;
       position: relative;
       width: max-content;
       animation: fadeout 200ms var(--typewriterSpeed) forwards;
+
+      @include md-screen {
+        font-size: clamp(1rem, 3vw + 1rem, 4rem);
+      }
 
       &::before,
       &::after {
@@ -43,7 +47,7 @@
       }
 
       &::before {
-        background: #142842;
+        background: #112843;
         animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) forwards,
       }
 
