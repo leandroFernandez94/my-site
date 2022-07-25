@@ -1,0 +1,21 @@
+$breakpoint-small: 768px;
+$breakpoint-medium: 1024px;
+$breakpoint-large: 1920px;
+
+@mixin sm-screen {
+  @media (min-width: $breakpoint-small) {
+    @content;
+  }
+}
+
+@mixin md-screen {
+  @media (min-width: $breakpoint-medium) {
+    @content;
+  }
+}
+
+@mixin lg-screen {
+  @media (min-width: $breakpoint-large) {
+    @content;
+  }
+}

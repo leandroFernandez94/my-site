@@ -9,8 +9,13 @@ const Landing: NextPage = () => (
     <header className={styles.hero}>
       <Navbar></Navbar>
       <div className={cn(styles.presentation, "main-content")}>
-        <p>Leandro Fernandez</p>
-        <p className="color-yellow">Frontend Developer</p>
+        <p className={styles.codeTyper}>
+          <span className="color-yellow">{"<h1> "}</span>
+          <span className="color-almond">Hello World!</span>
+          <span className="color-yellow">{" </h1>"}</span>
+        </p>
+        <p className={cn(styles.name, "color-olive")}>Leandro<br/>Fernandez</p>
+        <p className={cn(styles.subName, "color-white")}>Fullstack Developer with more than 5 years of experience  building webapps using React.js on the front and Node.js for the backend</p>
       </div>
     </header>
     <main className="main-content bg-dark-blue">

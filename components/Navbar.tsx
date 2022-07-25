@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import useChangeBGOnScroll from '../hooks/useChangeBGOnScroll'
-import styles from './navbar.module.scss'
+import styles from '../styles/navbar.module.scss'
 import cn from 'classnames';
 
 const Navbar = () => {

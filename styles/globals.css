@@ -1,9 +1,16 @@
 :root {
-  --dark-blue: #202235;
+  --dark-blue: #1d1f30;
   --blue: #242639;
   --red: #e84250;
-  --white: #ffffff;
+  --rose: #e31b6d;
+  --white: white;
+  --olive: #DBE8D4;
+  --green: #00feba;
   --yellow: #F4D06F;
+  --almond: #7a7673;
+
+  --typewriterSpeed: 2s;
+  --typewriterCharacters: 23;
 }
 
 
@@ -12,8 +19,8 @@ body {
   padding: 0;
   margin: 0;
   height: 100vh;
-  font-family: 'Noto Sans', sans-serif;
-  color: var(--white);
+  font-family: 'Nunito', sans-serif;
+  color: var(--olive);
 }
 
 .bg-dark-blue {
@@ -24,8 +31,20 @@ body {
   color: var(--red);
 }
 
+.color-rose {
+  color: var(--rose);
+}
+
 .color-yellow {
   color: var(--yellow)
+}
+
+.color-almond {
+  color: var(--almond)
+}
+
+.color-white {
+  color: var(--white)
 }
 
 .main-content {
