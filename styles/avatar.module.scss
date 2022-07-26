@@ -1,0 +1,21 @@
+@import './animations.module.scss';
+@import './breakpoints.module.scss';
+
+
+.avatarContainer {
+  display: flex;
+  align-items: center;
+  opacity: 0;
+
+  max-height: 0;
+  transform: translateY(-40px);
+  animation: fadeintop 200ms calc(var(--typewriterSpeed) + 200ms) forwards;
+
+  @include md-screen {
+    transform: translateX(40px);
+    max-height: initial;
+    animation: fadein 200ms calc(var(--typewriterSpeed) + 600ms) forwards;
+    width: 20%;
+    justify-content: flex-end;
+  }
+}

@@ -7,7 +7,7 @@ const Navbar = () => {
   const navRef = useChangeBGOnScroll<HTMLElement>({})
 
   return (
-    <nav className={cn(styles.nav, "main-content")} ref={navRef}>
+    <nav className={styles.nav} ref={navRef}>
       <ul>
         <li>
           <Link href="/">

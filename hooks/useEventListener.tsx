@@ -1,6 +1,10 @@
-import { useEffect, useMemo, useRef } from "react";
+import { useLayoutEffect, useEffect, useRef } from "react";
 
-function useEventListener(eventName: string, handler: EventListener, element?: HTMLElement) {
+function useEventListener(
+  eventName: string,
+  handler: EventListener,
+  element?: HTMLElement
+) {
   // Create a ref that stores handler
   const savedHandler = useRef<EventListener>();
 
@@ -11,7 +15,8 @@ function useEventListener(eventName: string, handler: EventListener, element?: H
   useEffect(() => {
     savedHandler.current = handler;
   }, [handler]);
-  useEffect(
+
+  useLayoutEffect(
     () => {
       // Make sure element supports addEventListener
       // On
@@ -20,10 +25,10 @@ function useEventListener(eventName: string, handler: EventListener, element?: H
       if (!isSupported) return;
       // Create event listener that calls handler function stored in ref
       const eventListener = (event: Event) => {
-        if(savedHandler.current) {
-          savedHandler.current(event)
+        if (savedHandler.current) {
+          savedHandler.current(event);
         }
-      }
+      };
       // Add event listener
       finalElem.addEventListener(eventName, eventListener);
       // Remove event listener on cleanup
@@ -35,4 +40,4 @@ function useEventListener(eventName: string, handler: EventListener, element?: H
   );
 }
 
-export default useEventListener
+export default useEventListener;

@@ -47,18 +47,18 @@ body {
 }
 
 .main-content {
-  padding: 0 50px;
+  padding: 6em 50px;
 }
 
 @media (min-width: 1024px) {
   .main-content {
-    padding: 0 200px;
+    padding: 12em 200px;
   }
 }
 
 @media (min-width: 1920px) {
   .main-content {
-    padding: 0 400px;
+    padding: 12em 400px;
   }
 }
 

@@ -1,0 +1,44 @@
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+
+@keyframes fadeout {
+  to {
+    opacity: 0;
+    height: 0;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    max-height: initial;
+  }
+
+  100% {
+    max-height: initial;
+    transform: translate(0);
+    transform-origin: 50% 50%;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeintop {
+  0% {
+    max-height: initial;
+  }
+
+  100% {
+    max-height: initial;
+    transform: translate(0);
+    transform-origin: 50% 50%;
+    opacity: 1;
+  }
+}

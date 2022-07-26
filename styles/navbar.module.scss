@@ -13,7 +13,16 @@
   justify-content: center;
 
   @include sm-screen {
+    padding: 0 50px;
+  }
+
+  @include md-screen {
+    padding: 0 200px;
     justify-content: flex-end;
+  }
+
+  @include lg-screen {
+    padding: 0 400px;
   }
 
   ul {
