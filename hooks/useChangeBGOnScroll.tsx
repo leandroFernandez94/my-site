@@ -5,10 +5,6 @@ function useChangeBGOnScroll<T extends HTMLElement>(style: any) {
   const ref = useRef<T>(null)
   const lastScroll = useRef<number>(0)
 
-  useEffect(() => {
-    
-  })
-
   useEventListener("scroll", (e) => {
     const scroll = window.scrollY;
     if(

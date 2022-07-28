@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import LandingAvatar from "./LandingAvatar";
 import styles from "../../styles/avatar.module.scss";
+import AvatarChatBubble from "./AvatarChatBubble";
 
 export default function LandingAvatarContainer() {
   const [hovered, setHovered] = useState(false);
@@ -47,6 +48,7 @@ export default function LandingAvatarContainer() {
 
   return (
     <div className={styles.avatarContainer} ref={setRef}>
+      <AvatarChatBubble />
       <LandingAvatar hovered={hovered} />
     </div>
   );

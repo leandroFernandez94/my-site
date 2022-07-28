@@ -15,13 +15,13 @@
 .hero {
   display: flex;
   justify-content: space-between;
-  flex-direction: column-reverse;
+  flex-direction: column;
   align-items: center;
-
+  margin-top: 4em;
 
   @include md-screen {
     flex-direction: row;
-    margin-top: 10em;
+    margin-top: 6em;
   }
 }
 

@@ -1,6 +1,6 @@
 :root {
-  --dark-blue: #1d1f30;
-  --blue: #242639;
+  --blue: #1d1f30;
+  --dark-blue: #242639;
   --red: #e84250;
   --rose: #e31b6d;
   --white: white;
@@ -47,18 +47,21 @@ body {
 }
 
 .main-content {
-  padding: 6em 50px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 @media (min-width: 1024px) {
   .main-content {
-    padding: 12em 200px;
+    padding-right: 200px;
+    padding-left: 200px;
   }
 }
 
 @media (min-width: 1920px) {
   .main-content {
-    padding: 12em 400px;
+    padding-left: 400px;
+    padding-right: 400px;
   }
 }
 
