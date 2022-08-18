@@ -2,18 +2,21 @@
   text-align: left;
   padding: 2em 50px;
   background-color: floralwhite;
+  min-height: 100%;
 }
 
 
 @media (min-width: 1024px) {
   .container {
     padding: 2em 200px;
+    min-height: 100%;
   }
 }
 
 @media (min-width: 1920px) {
   .container {
     padding: 2em 400px;
+    min-height: 100%;
   }
 }
 

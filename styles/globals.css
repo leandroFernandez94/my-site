@@ -21,14 +21,21 @@
 }
 
 
-html,
+html {
+  height: 100%;
+}
+
 body {
   padding: 0;
   margin: 0;
-  height: 100vh;
+  height: 100%;
   font-family: 'Nunito', sans-serif;
   color: var(--background);
   scroll-behavior: smooth;
+}
+
+#__next {
+  height: 100%;
 }
 
 .bg-dark-blue {
