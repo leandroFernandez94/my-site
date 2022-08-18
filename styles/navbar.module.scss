@@ -1,0 +1,62 @@
+@import './breakpoints.module.scss';
+
+.nav {
+  z-index: 1;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--links);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  height: var(--navbar-height);
+  display: flex;
+  justify-content: center;
+  background-color: var(--background);
+
+  @include sm-screen {
+    padding: 0 50px;
+  }
+
+  @include md-screen {
+    padding: 0 200px;
+    justify-content: flex-end;
+  }
+
+  @include lg-screen {
+    padding: 0 400px;
+  }
+
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+    a {
+      color: var(--green);
+      padding: 0.5em;
+      background-color: transparent;
+
+      &:hover {
+        text-decoration: underline;
+        backdrop-filter: opacity(80%);
+      }
+    }
+
+  }
+}
+
+.hide {
+  transform: translateY(calc(var(--navbar-height) * -1));
+  transition: transform .2s;
+}
+
+.visible {
+  transform: translateY(0);
+  transition: transform .2s;
+}

@@ -1,10 +1,82 @@
+:root {
+  --background: #050517;
+  --highlight-background: #EFC88B;
+  --title: #CF5C36;
+  --text: #D3D5D7;
+  --link: #F4E3B2;
+  --white: white;
+  --red: #e84250;
+
+  --rose: #e31b6d;
+  --green: #419D78;
+  /* --green: #FFD447; */
+
+  --yellow: #F4D06F;
+  --almond: #7a7673;
+
+  --typewriterSpeed: 2s;
+  --typewriterCharacters: 23;
+
+  --navbar-height: 4em;
+}
+
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: floralwhite;
+  height: 100vh;
+  font-family: 'Nunito', sans-serif;
+  color: var(--background);
+  scroll-behavior: smooth;
+}
+
+.bg-dark-blue {
+  background-color: var(--background);
+}
+
+.color-red {
+  color: var(--red);
+}
+
+.color-rose {
+  color: var(--rose);
+}
+
+.color-yellow {
+  color: var(--yellow)
+}
+
+.color-almond {
+  color: var(--almond)
+}
+
+.color-white {
+  color: var(--white)
+}
+
+.main-content {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+@media (min-width: 1024px) {
+  .main-content {
+    padding-right: 200px;
+    padding-left: 200px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .main-content {
+    padding-left: 400px;
+    padding-right: 400px;
+  }
+}
+
+
+.navbar-scrolled {
+  background-color: var(--highlight-background);
 }
 
 a {
@@ -14,27 +86,4 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-
-p,
-li {
-  line-height: 22px;
-  color: #302f2f;
-}
-
-li > span {
-  display: inline-block;
-  line-height: 25px;
-}
-
-li > span > img {
-  height: 14px;
-  width: 16px;
-  margin-right: 10px;
-}
-
-a {
-  text-decoration: none;
-  color: darkred;
 }
