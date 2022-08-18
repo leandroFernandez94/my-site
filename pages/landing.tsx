@@ -3,6 +3,9 @@ import Navbar from "../components/Navbar";
 import cn from "classnames";
 import styles from "../styles/Landing.module.scss";
 import LandingAvatarContainer from "../components/LandingAvatar/LandingAvatarContainer";
+import Link from "next/link";
+import Contact from "../components/Contact";
+import Image from "next/image";
 
 const Landing: NextPage = () => {
   return (
@@ -17,30 +20,81 @@ const Landing: NextPage = () => {
                 <span className="color-almond">Hello World!</span>
                 <span className="color-yellow">{" </h1>"}</span>
               </p>
-              <p className={cn(styles.name, "color-olive")}>
+              <p className={styles.name}>
                 Leandro
                 <br />
                 Fernandez
               </p>
-              <p className={cn(styles.subName, "color-white")}>
-                Fullstack Developer with more than 5 years of experience
-                building webapps using React.js on the front and Node.js for the
-                backend
-              </p>
+              <p className={styles.subName}>Fullstack Developer</p>
             </div>
-            <LandingAvatarContainer />
+            <Contact />
           </div>
         </section>
-        <main className="main-content bg-dark-blue">
-          <h3 className="section-title">Hello World!</h3>
-          I started coding in high school and never stopped since then. I have a
-          fullstack background, with most of my experience being related to
-          frontend technologies, I have been working with React + Node.js stacks
-          for a long time(5+ years) building web apps.
-          <br />
-          When I am not facing a computer screen, I enjoy singing(used to have a
-          band), playing padel or watching TV shows with my girlfriend.
-          <h4>Motivations</h4>
+        <main className={cn("bg-dark-blue", styles.content)}>
+          <section
+            className={cn(styles.landingSection, styles.contentSection)}
+            id="about-me"
+          >
+            <div className={styles.borderContainer}>
+              <h3 className={styles.sectionTitle}>About Me</h3>
+              <p className={styles.sectionSubtitle}>
+                My name is Leandro, I am a web developer from Argentina 👋🏻
+              </p>
+              <div className={styles.aboutMeContent}>
+                <div className={styles.aboutMeText}>
+                  I started coding at the age of 15 and never stopped since
+                  then.
+                  <br />
+                  <br />
+                  When I was in highschool I used to code in visual basic 5 and
+                  that's when my interest in building nice interfaces was born.
+                  Later on, I had my first experience with web development on a
+                  bootcamp at{" "}
+                  <Link href="https://despegar.com">
+                    <a target="_blank" rel="noopener noreferrer">
+                      Despegar
+                    </a>
+                  </Link>
+                  's AltoVuelo program, which turned out to be my first job
+                  experience.
+                  <br />
+                  <br />
+                  I also studied Systems Engeneering at UTN, the National
+                  Technology University of Argentina.
+                  <br />
+                  This was a great experience that helped me shape my knowledge
+                  in different engeneering areas. However, I dropped in 2018
+                  when I felt I wouldnt be able to carry both my formal studies
+                  and my fulltime job.
+                  <br />
+                  <br />
+                  When I am not facing a computer screen, I enjoy singing(used
+                  to have a band), going for a walk with my dog Penny, playing
+                  padel or watching TV shows with my girlfriend.
+                </div>
+                {/* <div className={styles.portraitContainer}>
+                  <Image
+                    src="/portrait.png"
+                    alt="portrait of Leandro"
+                    width={300}
+                    height={300}
+                    objectFit="contain"
+                    className={styles.portrait}
+                  ></Image>
+                  <div className={styles.overlay} />
+                </div> */}
+              </div>
+            </div>
+          </section>
+          <section
+            className={cn(styles.landingSection, styles.contentSection)}
+            id="my-experience"
+          >
+            <div className={styles.borderContainer}>
+              <h3 className={styles.sectionTitle}>My Experience</h3>
+            </div>
+          </section>
+          {/* <h4>Motivations</h4>
           <ul>
             <li className="listItem">
               Coming up with ideas that could be transformed into helpful
@@ -53,7 +107,7 @@ const Landing: NextPage = () => {
             <li className="listItem">
               Finding ways to improve the UX of the projects I work on.
             </li>
-          </ul>
+          </ul> */}
           {/* I enjoy working with my team mates and being helpful to them in any way I can, I also consider
               being a nice person to everyone an essential part of my daily routine */}
           {/* <br /> */}
@@ -63,7 +117,7 @@ const Landing: NextPage = () => {
           {/* Looking for new projects where I can write production ready code,
               apply my experience in the development of web apps and find good
               working environments where I can help others and get good feedback. */}
-          <h3 className="section-title">Education</h3>
+          {/* <h3 className="section-title">Education</h3>
           <ul>
             <li className="listItem">
               Currently focused on applying to courses and workshops to keep
@@ -80,7 +134,7 @@ const Landing: NextPage = () => {
             <li className="listItem">
               English level: Firsts Certificate with a B qualification.
             </li>
-          </ul>
+          </ul> */}
         </main>
       </div>
     </>

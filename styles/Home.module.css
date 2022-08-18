@@ -1,43 +1,46 @@
 .container {
   text-align: left;
-  padding: 0 50px;
+  padding: 2em 50px;
   background-color: floralwhite;
 }
 
+
 @media (min-width: 1024px) {
   .container {
-    padding: 0 200px;
+    padding: 2em 200px;
   }
 }
 
 @media (min-width: 1920px) {
   .container {
-    padding: 0 400px;
+    padding: 2em 400px;
   }
 }
 
-.main-line {
+
+#titleName {
+  margin: 0;
+}
+
+.mainLine {
   width: 100%;
   color: red;
 }
 
-.personal-data {
+.sectionTitle {
+  color: #e64d57;
+}
+
+.personalData {
   font-size: 16px;
-}
-
-#header-container {
+  padding-left: 1em;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: black;
+  flex-direction: column;
+  gap: .25em;
 }
 
-#header-container li {
+.personalData li {
   list-style-type: none;
-}
-
-#main-data {
-  color: black;
 }
 
 #profile-pic {
@@ -46,9 +49,7 @@
   margin: 10px 10px;
 }
 
-.section-title {
-  color: #e64d57;
-}
+
 
 .paragraph,
 .listItem {
@@ -57,7 +58,9 @@
 }
 
 .listItem>span {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: .5em;
   line-height: 25px;
 }
 

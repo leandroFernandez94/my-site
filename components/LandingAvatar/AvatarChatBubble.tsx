@@ -6,16 +6,14 @@ import { useState } from "react";
 import Link from "next/link";
 
 export default function AvatarChatBubble() {
-  const [visible, setVisible] = useState(false);
-  useEventListener("scroll", () => {
-    if (visible) return;
-    setVisible(true);
-  });
+  // const [visible, setVisible] = useState(false);
+  // useEventListener("scroll", () => {
+  //   if (visible) return;
+  //   setVisible(true);
+  // });
 
   return (
-    <div
-      className={cn(styles.avatarChatBubble, visible && styles.bubbleVisible)}
-    >
+    <div className={cn(styles.avatarChatBubble, styles.bubbleVisible)}>
       <p>Find me here!</p>
       <p className={styles.networks}>
         <span>
@@ -33,7 +31,7 @@ export default function AvatarChatBubble() {
           </Link>
         </span>
         <span>
-          <Link href="https://twitter.com/FLeandroF">
+          <Link href="mailto:leandroofernandezz@gmail.com">
             <a target="_blank" rel="noopener noreferrer">
               <Image
                 src="/email.svg"

@@ -1,15 +1,23 @@
 :root {
-  --blue: #1d1f30;
-  --dark-blue: #242639;
-  --red: #e84250;
-  --rose: #e31b6d;
+  --background: #050517;
+  --highlight-background: #EFC88B;
+  --title: #CF5C36;
+  --text: #D3D5D7;
+  --link: #F4E3B2;
   --white: white;
-  --green: #00feba;
+  --red: #e84250;
+
+  --rose: #e31b6d;
+  --green: #419D78;
+  /* --green: #FFD447; */
+
   --yellow: #F4D06F;
   --almond: #7a7673;
 
   --typewriterSpeed: 2s;
   --typewriterCharacters: 23;
+
+  --navbar-height: 4em;
 }
 
 
@@ -19,11 +27,12 @@ body {
   margin: 0;
   height: 100vh;
   font-family: 'Nunito', sans-serif;
-  color: var(--white);
+  color: var(--background);
+  scroll-behavior: smooth;
 }
 
 .bg-dark-blue {
-  background-color: var(--dark-blue);
+  background-color: var(--background);
 }
 
 .color-red {
@@ -67,7 +76,7 @@ body {
 
 
 .navbar-scrolled {
-  background-color: var(--dark-blue);
+  background-color: var(--highlight-background);
 }
 
 a {

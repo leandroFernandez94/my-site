@@ -4,13 +4,14 @@
   z-index: 1;
   font-size: 1rem;
   font-weight: bold;
-  color: var(--olive);
+  color: var(--links);
   width: 100%;
   position: fixed;
   top: 0;
-  height: 4em;
+  height: var(--navbar-height);
   display: flex;
   justify-content: center;
+  background-color: var(--background);
 
   @include sm-screen {
     padding: 0 50px;
@@ -48,4 +49,14 @@
     }
 
   }
+}
+
+.hide {
+  transform: translateY(calc(var(--navbar-height) * -1));
+  transition: transform .2s;
+}
+
+.visible {
+  transform: translateY(0);
+  transition: transform .2s;
 }
