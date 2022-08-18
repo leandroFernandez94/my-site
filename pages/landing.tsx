@@ -47,15 +47,15 @@ const Landing: NextPage = () => {
                   <br />
                   <br />
                   When I was in highschool I used to code in visual basic 5 and
-                  that's when my interest in building nice interfaces was born.
-                  Later on, I had my first experience with web development on a
-                  bootcamp at{" "}
+                  that&apos;s when my interest in building nice interfaces was
+                  born. Later on, I had my first experience with web development
+                  on a bootcamp at{" "}
                   <Link href="https://despegar.com">
                     <a target="_blank" rel="noopener noreferrer">
                       Despegar
                     </a>
                   </Link>
-                  's AltoVuelo program, which turned out to be my first job
+                  &apos;s AltoVuelo program, which turned out to be my first job
                   experience.
                   <br />
                   <br />
