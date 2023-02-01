@@ -1,7 +1,7 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
   return (
@@ -128,54 +128,91 @@ const Home: NextPage = () => {
             2013.
           </li>
           <li className={styles.listItem}>
-            English level: Firsts Certificate with a B qualification.
+            Languages I speak:
+            <ul>Spanish(native).</ul>
+            <ul>English: conversational level. Approved first certificate.</ul>
           </li>
         </ul>
         <h3 className={styles.sectionTitle}>Experience</h3>
         <h4>
+          Working as a contractor for{" "}
           <a
             className={styles.link}
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.sibly.com/"
+            href="https://www.devborn.com/"
           >
-            Sibly:
-          </a>{" "}
-          February 2021 - Present day:
+            Devborn:
+          </a>
         </h4>
         <ul>
-          <li className={styles.listItem}>
-            First experience working remotely with an international team.
-          </li>
-          <li className={styles.listItem}>
-            Replatform: Accomplished a project to refactor an old jquery web app
-            into a new react dashboard.
-          </li>
-          <li className={styles.listItem}>
-            Improved performance and code reliability issues adding typescript
-            to the project.
-          </li>
-          <li className={styles.listItem}>
-            Added jest unit tests to improve code coverage on both components
-            and Store logic.
-          </li>
-          <li className={styles.listItem}>
-            Developed new features working alongside product and designers team.
-          </li>
-          <li className={styles.listItem}>
-            Dealt with complex challenges related to websockets and messaging
-            events using sendbird SDK.
-          </li>
-          <li className={styles.listItem}>
-            Worked on timezone dependant features for a webapp used by people in
-            different zones of the world.
-          </li>
-          <li className={styles.listItem}>
-            Lead the development of a new web platform for users of sibly.
-          </li>
-          <li className={styles.listItem}>
-            Experience using an AWS setup with s3 and cloudfront.
-          </li>
+          <h4>
+            <a
+              className={styles.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.fabfitfun.com/"
+            >
+              FabFitFun:
+            </a>{" "}
+            January 2023 - present day:
+          </h4>
+          <ul>
+            <li className={styles.listItem}>
+              Working remotely with the web team on an ecommerce platform that
+              sells seasonal boxes of beauty, wellness, fashion, and fitness
+              products.
+            </li>
+            <li className={styles.listItem}>
+              Improve integration of A/B testing using Optimizely.
+            </li>
+          </ul>
+          <h4>
+            <a
+              className={styles.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.sibly.com/"
+            >
+              Sibly:
+            </a>{" "}
+            February 2021 - December 2022:
+          </h4>
+          <ul>
+            <li className={styles.listItem}>
+              First experience working remotely with an international team.
+            </li>
+            <li className={styles.listItem}>
+              Replatform: Accomplished a project to refactor an old jquery web
+              app into a new React dashboard.
+            </li>
+            <li className={styles.listItem}>
+              Improved performance and code reliability issues adding typescript
+              to the project.
+            </li>
+            <li className={styles.listItem}>
+              Added jest unit tests to improve code coverage on both components
+              and Store logic.
+            </li>
+            <li className={styles.listItem}>
+              Developed new features working alongside product and designers
+              team.
+            </li>
+            <li className={styles.listItem}>
+              Dealt with complex challenges related to websockets and messaging
+              events using sendbird SDK.
+            </li>
+            <li className={styles.listItem}>
+              Worked on timezone dependant features for a webapp used by people
+              in different zones of the world.
+            </li>
+            <li className={styles.listItem}>
+              Lead the development of a new web platform for users of sibly.
+            </li>
+            <li className={styles.listItem}>
+              Experience using an AWS setup with s3 and cloudfront.
+            </li>
+          </ul>
         </ul>
         <h4>
           <a
@@ -266,6 +303,6 @@ const Home: NextPage = () => {
       </main>
     </div>
   );
-}
+};
 
-export default Home
+export default Home;
