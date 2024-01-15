@@ -24,7 +24,7 @@ const Home: NextPage = () => {
                   width={20}
                   height={20}
                 />{" "}
-                Argentina
+                Barcelona, Spain
               </span>
             </li>
             <li className={styles.listItem}>
@@ -78,9 +78,10 @@ const Home: NextPage = () => {
         </header>
         <hr className={styles.mainLine} />
         <h3 className={styles.sectionTitle}>About me</h3>I am Web developer from
-        Buenos Aires. I can do both backend and frontend, but most of my
-        experience is related to frontend technologies, I have been working with
-        React + Node.js stacks for a long time(5+ years) building web apps.
+        Argentina. I am currently living in Barcelona, Spain. <br></br>I can do
+        both backend and frontend, but most of my experience is related to
+        frontend technologies, I have been working with React + Node.js stacks
+        for a long time(5+ years) building web apps.
         <h4>Things I find motivating:</h4>
         <ul>
           <li className={styles.listItem}>
@@ -135,6 +136,45 @@ const Home: NextPage = () => {
         </ul>
         <h3 className={styles.sectionTitle}>Experience</h3>
         <h4>
+          Working for{" "}
+          <a
+            className={styles.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://capitole-consulting.com/"
+          >
+            Capitole Consulting:
+          </a>
+        </h4>
+        <ul>
+          <h4>
+            <a
+              className={styles.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.axa.com/"
+            >
+              AXA:
+            </a>{" "}
+            May 2023 - present day:
+          </h4>
+          <ul>
+            <li className={styles.listItem}>
+              Contributed to the frontend of the Axa Partners group of
+              applications, working on a set of React apps customizable for
+              different partners through configuration and internationalization.
+            </li>
+            <li className={styles.listItem}>
+              Worked on the integration of PWA support for the apps.
+            </li>
+            <li>
+              Gained experience in the Azure cloud platform working on
+              configurations for deployment pipelines and different
+              automatization scripts.
+            </li>
+          </ul>
+        </ul>
+        <h4>
           Working as a contractor for{" "}
           <a
             className={styles.link}
@@ -155,7 +195,7 @@ const Home: NextPage = () => {
             >
               FabFitFun:
             </a>{" "}
-            January 2023 - present day:
+            January 2023 - April 2023:
           </h4>
           <ul>
             <li className={styles.listItem}>
