@@ -6,7 +6,7 @@ function useEventListener(
   element?: HTMLElement
 ) {
   // Create a ref that stores handler
-  const savedHandler = useRef<EventListener>();
+  const savedHandler = useRef<EventListener | null>(null);
 
   // Update ref.current value if handler changes.
   // This allows our effect below to always get latest handler ...

@@ -50,10 +50,12 @@ const Landing: NextPage = () => {
                   that&apos;s when my interest in building nice interfaces was
                   born. Later on, I had my first experience with web development
                   on a bootcamp at{" "}
-                  <Link href="https://despegar.com">
-                    <a target="_blank" rel="noopener noreferrer">
-                      Despegar
-                    </a>
+                  <Link
+                    href="https://despegar.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Despegar
                   </Link>
                   &apos;s AltoVuelo program, which turned out to be my first job
                   experience.
@@ -78,7 +80,7 @@ const Landing: NextPage = () => {
                     alt="portrait of Leandro"
                     width={300}
                     height={300}
-                    objectFit="contain"
+                    style={{ objectFit: "contain" }}
                     className={styles.portrait}
                   ></Image>
                   <div className={styles.overlay} />

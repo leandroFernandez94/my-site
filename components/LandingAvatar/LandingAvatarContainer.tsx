@@ -5,7 +5,7 @@ import AvatarChatBubble from "./AvatarChatBubble";
 
 export default function LandingAvatarContainer() {
   const [hovered, setHovered] = useState(false);
-  const imageContainerRef = useRef<HTMLDivElement>();
+  const imageContainerRef = useRef<HTMLDivElement | null>(null);
 
   function enterEventListener() {
     setHovered(true);
