@@ -31,10 +31,11 @@
 
     <link
       rel="preload"
-      as="style"
-      href="https://cdn.jsdelivr.net/npm/geist@1/dist/font.css"
+      as="font"
+      type="font/woff2"
+      crossorigin
+      href="https://cdn.jsdelivr.net/npm/geist@1/dist/fonts/geist-sans/Geist-Variable.woff2"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1/dist/font.css" />
 
     <link
       rel="preload"
@@ -59,9 +60,9 @@
     <link rel="preload" as="image" href="public/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
 
-    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-      tailwind.config = {
+      window.tailwind.config = {
         theme: {
           extend: {
             colors: {
@@ -128,6 +129,13 @@
     </script>
 
     <style>
+      @font-face {
+        font-family: 'Geist';
+        src: url('https://cdn.jsdelivr.net/npm/geist@1/dist/fonts/geist-sans/Geist-Variable.woff2') format('woff2');
+        font-weight: 100 900;
+        font-display: swap;
+      }
+
       html,
       body {
         min-height: 100%;
@@ -215,11 +223,10 @@
           <a class="transition-colors hover:text-secondary" href="#about">About</a>
           <a class="transition-colors hover:text-secondary" href="#education">Education</a>
           <a class="transition-colors hover:text-secondary" href="#experience">Experience</a>
-          <a
-            href="index.html"
-            download
+          <button
+            onclick="window.print()"
             class="rounded border border-secondary px-3 py-1.5 font-label text-xs font-medium uppercase tracking-wide text-secondary transition-colors hover:bg-secondary hover:text-white"
-            >Download CV</a
+            >Download CV</button
           >
         </div>
       </div>
