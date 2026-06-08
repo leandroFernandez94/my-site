@@ -9,7 +9,7 @@ const os = require("os");
 
 // Load .env if present
 function loadEnv() {
-  const envPath = path.join(__dirname, ".env");
+  const envPath = path.join(__dirname, "..", ".env");
   if (!fs.existsSync(envPath)) return;
   const lines = fs.readFileSync(envPath, "utf8").split("\n");
   for (const line of lines) {
@@ -25,7 +25,7 @@ function loadEnv() {
 loadEnv();
 
 const PORT = parseInt(process.env.PORT || "5173", 10);
-const ROOT = __dirname;
+const ROOT = path.join(__dirname, "..");
 
 function getNetworkIP() {
   const ifaces = os.networkInterfaces();
