@@ -3,7 +3,7 @@ const { chromium } = require('playwright');
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage();
   
-  await page.goto('http://127.0.0.1:8768/index.html', { waitUntil: 'networkidle', timeout: 20000 });
+  await page.goto('http://127.0.0.1:5173/index.html', { waitUntil: 'networkidle', timeout: 20000 });
   await page.waitForTimeout(3000);
   
   const result = await page.evaluate(() => {
