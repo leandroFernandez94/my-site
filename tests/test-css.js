@@ -3,7 +3,7 @@ const { chromium } = require('playwright');
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage();
   
-  await page.goto('file:///home/leandro/projects/my-site/index.html', { waitUntil: 'load', timeout: 15000 });
+  await page.goto('http://127.0.0.1:5173/index.html', { waitUntil: 'load', timeout: 15000 });
   await page.waitForTimeout(2000);
   
   const css = await page.evaluate(() => {
