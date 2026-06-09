@@ -31,8 +31,8 @@ Chain strategy: pending
 
 ## Phase 4: Verification
 
-- [ ] 4.1 Verify no horizontal scrollbar at 320px, 375px, 414px viewports (Chrome DevTools)
-- [ ] 4.2 Verify nav links remain readable and tap-accessible at 320px
-- [ ] 4.3 Verify timeline text left edge aligns with About Me text (±4px) at 375px
-- [ ] 4.4 Verify `overflow-x: hidden` present on html, body in computed styles
-- [ ] 4.5 Verify print layout unchanged via print preview (navbar hidden, timeline simplified)
+- [x] 4.1 Verify no horizontal scrollbar at 320px, 375px, 414px viewports (Chrome DevTools)
+- [x] 4.2 Verify nav links remain readable and tap-accessible at 320px
+- [x] 4.3 Verify timeline text left edge aligns with About Me text (±4px) at 375px
+- [x] 4.4 Verify `overflow-x: hidden` present on html, body in computed styles
+- [x] 4.5 Verify print layout unchanged via print preview (navbar hidden, timeline simplified)
