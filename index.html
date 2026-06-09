@@ -136,6 +136,56 @@
         font-display: swap;
       }
 
+      .timeline {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+
+      .timeline-item {
+        position: relative;
+        padding-left: 1.5rem;
+      }
+
+      .timeline-item::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.875rem;
+        z-index: 1;
+        height: 0.75rem;
+        width: 0.75rem;
+        transform: translate(-50%, -50%);
+        border-radius: 9999px;
+        background-color: var(--timeline-dot-color, #e0e3e5);
+      }
+
+      .timeline-item::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.875rem;
+        bottom: calc((var(--timeline-gap, 0rem) + 0.875rem) * -1);
+        width: 1px;
+        transform: translateX(-50%);
+        background-color: #c6c6cd;
+      }
+
+      .timeline-item:last-child::after {
+        content: none;
+      }
+
+      .timeline-item-gap-6 {
+        --timeline-gap: 1.5rem;
+      }
+
+      .timeline-item-gap-10 {
+        --timeline-gap: 2.5rem;
+      }
+
+      .timeline-item-accent {
+        --timeline-dot-color: #0051d5;
+      }
+
       html,
       body {
         min-height: 100%;
@@ -194,7 +244,8 @@
           padding-left: 0 !important;
         }
 
-        .timeline-item::before {
+        .timeline-item::before,
+        .timeline-item::after {
           content: none !important;
         }
 
@@ -348,14 +399,14 @@
 
       <section id="education" class="scroll-mt-28 mx-auto mb-section-gap max-w-[1100px]">
         <h2 class="mb-6 font-headline text-3xl font-semibold text-primary">Education</h2>
-        <ol class="timeline relative border-l border-outline-variant pl-8">
-          <li class="timeline-item relative mb-6 before:absolute before:-left-[31px] before:top-2 before:h-3 before:w-3 before:rounded-full before:bg-surface-container-highest">
+        <ol class="timeline relative">
+          <li class="timeline-item timeline-item-gap-6 mb-6">
             <p class="font-body text-base leading-7 text-on-surface">
               Currently focused on applying to courses and workshops to keep myself updated in terms of new
               technologies that can help me become a better engineer.
             </p>
           </li>
-          <li class="timeline-item relative mb-6 before:absolute before:-left-[31px] before:top-2 before:h-3 before:w-3 before:rounded-full before:bg-surface-container-highest">
+          <li class="timeline-item timeline-item-gap-6 mb-6">
             <p class="font-body text-base leading-7 text-on-surface">
               Systems Engineering at
               <a
@@ -368,13 +419,13 @@
               <time datetime="2013">2013</time> - dropped in <time datetime="2018">2018</time>.
             </p>
           </li>
-          <li class="timeline-item relative mb-6 before:absolute before:-left-[31px] before:top-2 before:h-3 before:w-3 before:rounded-full before:bg-surface-container-highest">
+          <li class="timeline-item timeline-item-gap-6 mb-6">
             <p class="font-body text-base leading-7 text-on-surface">
               Computer Technician at E.T. 35 D.E. 18 Ing. Eduardo Latzina,
               <time datetime="2008">2008</time> - <time datetime="2013">2013</time>.
             </p>
           </li>
-          <li class="timeline-item relative before:absolute before:-left-[31px] before:top-2 before:h-3 before:w-3 before:rounded-full before:bg-surface-container-highest">
+          <li class="timeline-item">
             <p class="font-body text-base leading-7 text-on-surface">
               Languages: Spanish (native), English: conversational level, Approved first certificate.
             </p>
@@ -385,8 +436,8 @@
       <section id="experience" class="scroll-mt-28 mx-auto max-w-[1100px]">
         <h2 class="mb-6 font-headline text-3xl font-semibold text-primary">Experience</h2>
 
-        <ol class="timeline relative border-l border-outline-variant pl-8">
-          <li class="timeline-item relative mb-10 before:absolute before:-left-[31px] before:top-2 before:h-3 before:w-3 before:rounded-full before:bg-secondary">
+        <ol class="timeline relative">
+          <li class="timeline-item timeline-item-gap-10 timeline-item-accent mb-10">
             <article>
               <h3 class="font-headline text-2xl font-semibold text-on-surface">Capitole Consulting</h3>
               <h4 class="mb-3 font-headline text-xl font-semibold text-on-surface-variant">
@@ -406,7 +457,7 @@
             </article>
           </li>
 
-          <li class="timeline-item relative mb-10 before:absolute before:-left-[31px] before:top-2 before:h-3 before:w-3 before:rounded-full before:bg-surface-container-highest">
+          <li class="timeline-item timeline-item-gap-10 mb-10">
             <article>
               <h3 class="font-headline text-2xl font-semibold text-on-surface">Devborn</h3>
               <h4 class="mb-3 font-headline text-xl font-semibold text-on-surface-variant">
@@ -439,7 +490,7 @@
             </article>
           </li>
 
-          <li class="timeline-item relative mb-10 before:absolute before:-left-[31px] before:top-2 before:h-3 before:w-3 before:rounded-full before:bg-surface-container-highest">
+          <li class="timeline-item timeline-item-gap-10 mb-10">
             <article>
               <h3 class="font-headline text-2xl font-semibold text-on-surface">Bons</h3>
               <h4 class="mb-3 font-headline text-xl font-semibold text-on-surface-variant">
@@ -479,7 +530,7 @@
             </article>
           </li>
 
-          <li class="timeline-item relative before:absolute before:-left-[31px] before:top-2 before:h-3 before:w-3 before:rounded-full before:bg-surface-container-highest">
+          <li class="timeline-item">
             <article>
               <h3 class="font-headline text-2xl font-semibold text-on-surface">Despegar.com</h3>
               <h4 class="mb-3 font-headline text-xl font-semibold text-on-surface-variant">
