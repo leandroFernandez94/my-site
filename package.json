@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node scripts/server.js",
+    "build": "node scripts/build.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:e2e": "node scripts/test-runner.js"
   },
