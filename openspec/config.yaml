@@ -1,20 +1,23 @@
 schema: spec-driven
 
 project: my-site
-stack: Vanilla HTML5, Tailwind CSS CDN, semantic markup, print stylesheet
+stack: Vanilla HTML5, Tailwind CSS CDN, inline config, print stylesheet, Cloudflare Pages
 
 context: |
-  Tech stack: Vanilla HTML5, Tailwind CSS CDN (deferred), semantic markup
-  Architecture: Single-file HTML at project root, zero JavaScript framework
-  Testing: No test runner
-  Style: Tailwind CSS CDN with custom color/font config, @media print stylesheet
+  Single-file static CV site (index.html) with Tailwind CSS via CDN.
+  No framework, no build tools, no bundler. Custom Node.js dev server.
+  Deployed to Cloudflare Pages (leandrofernandez.dev).
+  Fonts: Geist, Hanken Grotesk, JetBrains Mono via CDN.
+  E2E tests via custom Playwright runner.
 
 strict_tdd: false
 testing_capabilities:
-  runner: none
+  runner: custom (scripts/test-runner.js)
+  runner_command: "npm run test:e2e"
   unit: false
   integration: false
-  e2e: false
+  e2e: true
+  e2e_tool: "Playwright (Chromium headless)"
   coverage: false
   linter: false
   type_checker: false
@@ -34,10 +37,10 @@ rules:
     - Keep tasks completable in one session
   apply:
     tdd: false
-    test_command: ""
+    test_command: "npm run test:e2e"
   verify:
-    test_command: ""
-    build_command: "npm run build"
+    test_command: "npm run test:e2e"
+    build_command: ""
     coverage_threshold: 0
   archive:
     - Warn before merging destructive deltas
