@@ -1,114 +1,92 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Leandro Fernandez | Web Developer CV</title>
-    <meta
-      name="description"
-      content="Web developer from Argentina based in Barcelona, Spain. Frontend-focused engineer with 5+ years building React and Node.js web applications."
-    />
-    <link rel="canonical" href="https://leandrofernandez.dev" />
 
-    <meta property="og:title" content="Leandro Fernandez | Web Developer CV" />
-    <meta
-      property="og:description"
-      content="Frontend-focused Web Developer with 5+ years of experience building React + Node.js applications."
-    />
-    <meta property="og:type" content="profile" />
-    <meta property="og:url" content="https://leandrofernandez.dev" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leandro Fernandez | Web Developer CV</title>
+  <meta name="description"
+    content="Web developer from Argentina based in Barcelona, Spain. Frontend-focused engineer with 5+ years building React and Node.js web applications." />
+  <link rel="canonical" href="https://leandrofernandez.dev" />
 
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Leandro Fernandez | Web Developer CV" />
-    <meta
-      name="twitter:description"
-      content="Web developer based in Barcelona with strong frontend and full-stack experience."
-    />
+  <meta property="og:title" content="Leandro Fernandez | Web Developer CV" />
+  <meta property="og:description"
+    content="Frontend-focused Web Developer with 5+ years of experience building React + Node.js applications." />
+  <meta property="og:type" content="profile" />
+  <meta property="og:url" content="https://leandrofernandez.dev" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Leandro Fernandez | Web Developer CV" />
+  <meta name="twitter:description"
+    content="Web developer based in Barcelona with strong frontend and full-stack experience." />
 
-    <link
-      rel="preload"
-      as="font"
-      type="font/woff2"
-      crossorigin
-      href="https://cdn.jsdelivr.net/npm/geist@1/dist/fonts/geist-sans/Geist-Variable.woff2"
-    />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
 
-    <link
-      rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap"
-    />
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="https://cdn.jsdelivr.net/npm/geist@1/dist/fonts/geist-sans/Geist-Variable.woff2" />
 
-    <link
-      rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap"
-    />
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap" />
 
-    <link rel="preload" as="image" href="public/favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      window.tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              background: "#f7f9fb",
-              surface: "#f7f9fb",
-              "surface-container-low": "#f2f4f6",
-              "surface-container": "#eceef0",
-              "surface-container-high": "#e6e8ea",
-              "surface-container-highest": "#e0e3e5",
-              primary: "#000000",
-              secondary: "#0051d5",
-              "on-surface": "#191c1e",
-              "on-surface-variant": "#45464d",
-              "outline-variant": "#c6c6cd"
-            },
-            fontFamily: {
-              "headline-lg": ["Geist", "sans-serif"],
-              "headline-xl": ["Geist", "sans-serif"],
-              "headline-lg-mobile": ["Geist", "sans-serif"],
-              "body-lg": ["Hanken Grotesk", "sans-serif"],
-              "body-md": ["Hanken Grotesk", "sans-serif"],
-              "label-md": ["JetBrains Mono", "monospace"],
-              "code-sm": ["JetBrains Mono", "monospace"],
-              headline: ["Geist", "sans-serif"],
-              body: ["Hanken Grotesk", "sans-serif"],
-              label: ["JetBrains Mono", "monospace"]
-            },
-            spacing: {
-              "container-max": "1100px",
-              "section-gap": "8rem",
-              "element-gap": "1.5rem",
-              gutter: "24px",
-              "margin-mobile": "20px"
-            },
-            borderRadius: {
-              DEFAULT: "0.125rem",
-              lg: "0.25rem",
-              xl: "0.5rem",
-              full: "0.75rem"
-            }
+  <link rel="preload" as="image" href="public/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    window.tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: "#f7f9fb",
+            surface: "#f7f9fb",
+            "surface-container-low": "#f2f4f6",
+            "surface-container": "#eceef0",
+            "surface-container-high": "#e6e8ea",
+            "surface-container-highest": "#e0e3e5",
+            primary: "#000000",
+            secondary: "#0051d5",
+            "on-surface": "#191c1e",
+            "on-surface-variant": "#45464d",
+            "outline-variant": "#c6c6cd"
+          },
+          fontFamily: {
+            "headline-lg": ["Geist", "sans-serif"],
+            "headline-xl": ["Geist", "sans-serif"],
+            "headline-lg-mobile": ["Geist", "sans-serif"],
+            "body-lg": ["Hanken Grotesk", "sans-serif"],
+            "body-md": ["Hanken Grotesk", "sans-serif"],
+            "label-md": ["JetBrains Mono", "monospace"],
+            "code-sm": ["JetBrains Mono", "monospace"],
+            headline: ["Geist", "sans-serif"],
+            body: ["Hanken Grotesk", "sans-serif"],
+            label: ["JetBrains Mono", "monospace"]
+          },
+          spacing: {
+            "container-max": "1100px",
+            "section-gap": "8rem",
+            "element-gap": "1.5rem",
+            gutter: "24px",
+            "margin-mobile": "20px"
+          },
+          borderRadius: {
+            DEFAULT: "0.125rem",
+            lg: "0.25rem",
+            xl: "0.5rem",
+            full: "0.75rem"
           }
         }
-      };
-    </script>
+      }
+    };
+  </script>
 
-    <script type="application/ld+json">
+  <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Person",
@@ -128,460 +106,405 @@
       }
     </script>
 
-    <style>
-      @font-face {
-        font-family: 'Geist';
-        src: url('https://cdn.jsdelivr.net/npm/geist@1/dist/fonts/geist-sans/Geist-Variable.woff2') format('woff2');
-        font-weight: 100 900;
-        font-display: swap;
+  <style>
+    @font-face {
+      font-family: 'Geist';
+      src: url('https://cdn.jsdelivr.net/npm/geist@1/dist/fonts/geist-sans/Geist-Variable.woff2') format('woff2');
+      font-weight: 100 900;
+      font-display: swap;
+    }
+
+    .timeline {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.875rem;
+      z-index: 1;
+      height: 0.75rem;
+      width: 0.75rem;
+      transform: translate(-50%, -50%);
+      border-radius: 9999px;
+      background-color: var(--timeline-dot-color, #e0e3e5);
+    }
+
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.875rem;
+      bottom: calc((var(--timeline-gap, 0rem) + 0.875rem) * -1);
+      width: 1px;
+      transform: translateX(-50%);
+      background-color: #c6c6cd;
+    }
+
+    .timeline-item:last-child::after {
+      content: none;
+    }
+
+    .timeline-item-gap-6 {
+      --timeline-gap: 1.5rem;
+    }
+
+    .timeline-item-gap-10 {
+      --timeline-gap: 2.5rem;
+    }
+
+    .timeline-item-accent {
+      --timeline-dot-color: #0051d5;
+    }
+
+    html,
+    body {
+      min-height: 100%;
+    }
+
+    @media print {
+      @page {
+        margin: 2cm;
+      }
+
+      .no-print {
+        display: none !important;
+      }
+
+      * {
+        color: #000 !important;
+        background: #fff !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        backdrop-filter: none !important;
+      }
+
+      body,
+      main,
+      section,
+      article {
+        margin: 0 !important;
+        max-width: none !important;
+      }
+
+      body,
+      main {
+        padding: 0 !important;
+      }
+
+      a,
+      a:visited {
+        color: #000 !important;
+        text-decoration: underline !important;
+      }
+
+      a[href]:not([href^="mailto:"])::after {
+        content: " (" attr(href) ")";
+        font-size: 0.85em;
+        font-weight: 400;
+        word-break: break-all;
       }
 
       .timeline {
-        padding-left: 2rem;
-        padding-right: 2rem;
+        border-left: none !important;
+        padding-left: 0 !important;
       }
 
       .timeline-item {
-        position: relative;
-        padding-left: 1.5rem;
+        margin-bottom: 1rem !important;
+        padding-left: 0 !important;
       }
 
-      .timeline-item::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0.875rem;
-        z-index: 1;
-        height: 0.75rem;
-        width: 0.75rem;
-        transform: translate(-50%, -50%);
-        border-radius: 9999px;
-        background-color: var(--timeline-dot-color, #e0e3e5);
-      }
-
+      .timeline-item::before,
       .timeline-item::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0.875rem;
-        bottom: calc((var(--timeline-gap, 0rem) + 0.875rem) * -1);
-        width: 1px;
-        transform: translateX(-50%);
-        background-color: #c6c6cd;
+        content: none !important;
       }
 
-      .timeline-item:last-child::after {
-        content: none;
+      section,
+      article,
+      li {
+        page-break-inside: avoid;
+        break-inside: avoid;
       }
 
-      .timeline-item-gap-6 {
-        --timeline-gap: 1.5rem;
+      h1,
+      h2,
+      h3,
+      h4 {
+        page-break-after: avoid;
+        break-after: avoid;
       }
+    }
+  </style>
+</head>
 
-      .timeline-item-gap-10 {
-        --timeline-gap: 2.5rem;
-      }
-
-      .timeline-item-accent {
-        --timeline-dot-color: #0051d5;
-      }
-
-      html,
-      body {
-        min-height: 100%;
-      }
-
-      @media print {
-        @page {
-          margin: 2cm;
-        }
-
-        .no-print {
-          display: none !important;
-        }
-
-        * {
-          color: #000 !important;
-          background: #fff !important;
-          box-shadow: none !important;
-          text-shadow: none !important;
-          backdrop-filter: none !important;
-        }
-
-        body,
-        main,
-        section,
-        article {
-          margin: 0 !important;
-          max-width: none !important;
-        }
-
-        body,
-        main {
-          padding: 0 !important;
-        }
-
-        a,
-        a:visited {
-          color: #000 !important;
-          text-decoration: underline !important;
-        }
-
-        a[href]:not([href^="mailto:"])::after {
-          content: " (" attr(href) ")";
-          font-size: 0.85em;
-          font-weight: 400;
-          word-break: break-all;
-        }
-
-        .timeline {
-          border-left: none !important;
-          padding-left: 0 !important;
-        }
-
-        .timeline-item {
-          margin-bottom: 1rem !important;
-          padding-left: 0 !important;
-        }
-
-        .timeline-item::before,
-        .timeline-item::after {
-          content: none !important;
-        }
-
-        section,
-        article,
-        li {
-          page-break-inside: avoid;
-          break-inside: avoid;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4 {
-          page-break-after: avoid;
-          break-after: avoid;
-        }
-      }
-    </style>
-  </head>
-  <body class="min-h-screen bg-background font-body text-on-surface antialiased">
-    <nav class="no-print fixed inset-x-0 top-0 z-50 border-b border-outline-variant/60 bg-surface/80 backdrop-blur-md">
-      <div class="mx-auto flex h-16 w-full max-w-[1100px] items-center justify-between px-[20px] md:px-gutter">
-        <a href="#" class="font-headline text-sm font-semibold tracking-wide text-primary">Leandro Fernandez</a>
-        <div class="flex items-center gap-4 text-sm font-medium text-on-surface-variant">
-          <div class="hidden items-center gap-4 md:flex">
-            <a class="transition-colors hover:text-secondary" href="#about">About</a>
-            <a class="transition-colors hover:text-secondary" href="#education">Education</a>
-            <a class="transition-colors hover:text-secondary" href="#experience">Experience</a>
-          </div>
-          <button
-            onclick="window.print()"
-            class="rounded border border-secondary px-3 py-1.5 font-label text-xs font-medium uppercase tracking-wide text-secondary transition-colors hover:bg-secondary hover:text-white"
-            >Download CV</button
-          >
+<body class="min-h-screen bg-background font-body text-on-surface antialiased">
+  <nav class="no-print fixed inset-x-0 top-0 z-50 border-b border-outline-variant/60 bg-surface/80 backdrop-blur-md">
+    <div class="mx-auto flex h-16 w-full max-w-[1100px] items-center justify-between px-[20px] md:px-gutter">
+      <a href="#" class="font-headline text-sm font-semibold tracking-wide text-primary">Leandro Fernandez</a>
+      <div class="flex items-center gap-4 text-sm font-medium text-on-surface-variant">
+        <div class="hidden items-center gap-4 md:flex">
+          <a class="transition-colors hover:text-secondary" href="#about">About</a>
+          <a class="transition-colors hover:text-secondary" href="#education">Education</a>
+          <a class="transition-colors hover:text-secondary" href="#experience">Experience</a>
         </div>
+        <button onclick="window.print()"
+          class="rounded border border-secondary px-3 py-1.5 font-label text-xs font-medium uppercase tracking-wide text-secondary transition-colors hover:bg-secondary hover:text-white">Download
+          CV</button>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <main class="mx-auto w-full max-w-[1100px] px-[20px] pb-16 pt-28 md:px-gutter">
-      <header class="mx-auto mb-8 md:mb-12 lg:mb-16 max-w-[1100px] text-center">
-        <h1 class="font-headline text-4xl font-bold text-primary sm:text-5xl">Leandro Fernandez</h1>
-        <p class="mt-4 font-label text-sm font-medium uppercase tracking-[0.14em] text-on-surface-variant">Web Developer</p>
-        
+  <main class="mx-auto w-full max-w-[1100px] px-[20px] pb-16 pt-28 md:px-gutter">
+    <header class="mx-auto mb-8 md:mb-12 lg:mb-16 max-w-[1100px] text-center">
+      <h1 class="font-headline text-4xl font-bold text-primary sm:text-5xl">Leandro Fernandez</h1>
+      <p class="mt-4 font-label text-sm font-medium uppercase tracking-[0.14em] text-on-surface-variant">Software
+        developer</p>
 
-        <address class="mx-auto mt-8 not-italic">
-          <ul class="flex list-none flex-wrap items-center justify-center gap-x-6 gap-y-3 pl-0 text-sm">
-            <li class="flex items-center gap-2 text-on-surface-variant">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 35.219 35.219"
-                width="18"
-                height="18"
-                fill="currentColor"
-                aria-hidden="true"
-              >
+
+      <address class="mx-auto mt-8 not-italic">
+        <ul class="flex list-none flex-wrap items-center justify-center gap-x-6 gap-y-3 pl-0 text-sm">
+          <li class="flex items-center gap-2 text-on-surface-variant">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.219 35.219" width="18" height="18"
+              fill="currentColor" aria-hidden="true">
+              <path
+                d="M17.612,0C11.005,0,5.648,5.321,5.648,11.885c0,3.358,3.294,9.374,3.294,9.374l8.229,13.96l8.586-13.797c0,0,3.814-5.74,3.814-9.537C29.572,5.321,24.216,0,17.612,0z M17.556,18.431c-3.784,0-6.849-3.065-6.849-6.853c0-3.783,3.064-6.846,6.849-6.846c3.782,0,6.85,3.063,6.85,6.846C24.406,15.366,21.338,18.431,17.556,18.431z" />
+            </svg>
+            <span>Barcelona, Spain</span>
+          </li>
+          <li>
+            <a class="inline-flex items-center gap-2 text-secondary transition-colors hover:text-primary hover:underline"
+              href="mailto:leandroofernandezz@gmail.com">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20" width="18" height="18" fill="currentColor"
+                aria-hidden="true">
                 <path
-                  d="M17.612,0C11.005,0,5.648,5.321,5.648,11.885c0,3.358,3.294,9.374,3.294,9.374l8.229,13.96l8.586-13.797c0,0,3.814-5.74,3.814-9.537C29.572,5.321,24.216,0,17.612,0z M17.556,18.431c-3.784,0-6.849-3.065-6.849-6.853c0-3.783,3.064-6.846,6.849-6.846c3.782,0,6.85,3.063,6.85,6.846C24.406,15.366,21.338,18.431,17.556,18.431z"
-                />
+                  d="m12.030875,10.984375c-1.953,0 -12.015,-8.109 -12.015,-8.109l0,-0.891c0,-1.104 0.896,-2 2.002,-2l20.026,0c1.107,0 2.003,0.896 2.003,2l-0.016,1c0,0 -9.953,8 -12,8zm0,2.75c2.141,0 12,-7.75 12,-7.75l0.016,12c0,1.104 -0.896,2 -2.003,2l-20.026,0c-1.105,0 -2.002,-0.896 -2.002,-2l0.016,-12c-0.001,0 10.046,7.75 11.999,7.75z" />
               </svg>
-              <span>Barcelona, Spain</span>
-            </li>
-            <li>
-              <a
-                class="inline-flex items-center gap-2 text-secondary transition-colors hover:text-primary hover:underline"
-                href="mailto:leandroofernandezz@gmail.com"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 20"
-                  width="18"
-                  height="18"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="m12.030875,10.984375c-1.953,0 -12.015,-8.109 -12.015,-8.109l0,-0.891c0,-1.104 0.896,-2 2.002,-2l20.026,0c1.107,0 2.003,0.896 2.003,2l-0.016,1c0,0 -9.953,8 -12,8zm0,2.75c2.141,0 12,-7.75 12,-7.75l0.016,12c0,1.104 -0.896,2 -2.003,2l-20.026,0c-1.105,0 -2.002,-0.896 -2.002,-2l0.016,-12c-0.001,0 10.046,7.75 11.999,7.75z"
-                  />
-                </svg>
-                <span>leandroofernandezz@gmail.com</span>
-              </a>
-            </li>
-            <li>
-              <a
-                class="inline-flex items-center gap-2 text-secondary transition-colors hover:text-primary hover:underline"
-                href="https://www.linkedin.com/in/leandro-fernandez-dev"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="18"
-                  height="18"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
-                  />
-                </svg>
-                <span>/leandro-fernandez-dev</span>
-              </a>
-            </li>
-            <li>
-              <a
-                class="inline-flex items-center gap-2 text-secondary transition-colors hover:text-primary hover:underline"
-                href="https://github.com/leandroFernandez94"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 1024 1024"
-                  width="18"
-                  height="18"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"
-                    transform="scale(64)"
-                  />
-                </svg>
-                <span>/leandroFernandez94</span>
-              </a>
-            </li>
-          </ul>
-        </address>
-      </header>
-
-      <section id="about" class="scroll-mt-28 mx-auto mb-8 md:mb-12 lg:mb-16 max-w-[1100px] space-y-4">
-        <h2 class="font-headline text-3xl font-semibold text-primary">About Me</h2>
-        <p class="font-body text-lg leading-8 text-on-surface">
-          I am Web developer from Argentina. I am currently living in Barcelona, Spain.
-        </p>
-        <p class="font-body text-lg leading-8 text-on-surface">
-          I can do both backend and frontend, but most of my experience is related to frontend technologies,
-          I have been working with React + Node.js stacks for a long time(5+ years) building web apps.
-        </p>
-
-        <h3 class="pt-2 font-headline text-xl font-semibold text-on-surface">Things I find motivating:</h3>
-        <ul class="list-decimal space-y-2 pl-6 font-body text-base leading-7 text-on-surface">
-          <li>Coming up with ideas that could be transformed into helpful utilities.</li>
-          <li>
-            Elaborating solutions for challenging technical problems and documenting them the best way I can.
-          </li>
-          <li>Finding ways to improve the UX of the projects I work on.</li>
-        </ul>
-      </section>
-
-      <section id="education" class="scroll-mt-28 mx-auto mb-8 md:mb-12 lg:mb-16 max-w-[1100px]">
-        <h2 class="mb-6 font-headline text-3xl font-semibold text-primary">Education</h2>
-        <ol class="timeline relative">
-          <li class="timeline-item timeline-item-gap-6 mb-6">
-            <p class="font-body text-base leading-7 text-on-surface">
-              Currently focused on applying to courses and workshops to keep myself updated in terms of new
-              technologies that can help me become a better engineer.
-            </p>
-          </li>
-          <li class="timeline-item timeline-item-gap-6 mb-6">
-            <p class="font-body text-base leading-7 text-on-surface">
-              Systems Engineering at
-              <a
-                class="text-secondary transition-colors hover:text-primary hover:underline"
-                href="https://en.wikipedia.org/wiki/National_Technological_University"
-                target="_blank"
-                rel="noopener noreferrer"
-                >UTN</a
-              >,
-              <time datetime="2013">2013</time> - dropped in <time datetime="2018">2018</time>.
-            </p>
-          </li>
-          <li class="timeline-item timeline-item-gap-6 mb-6">
-            <p class="font-body text-base leading-7 text-on-surface">
-              Computer Technician at E.T. 35 D.E. 18 Ing. Eduardo Latzina,
-              <time datetime="2008">2008</time> - <time datetime="2013">2013</time>.
-            </p>
-          </li>
-          <li class="timeline-item">
-            <p class="font-body text-base leading-7 text-on-surface">
-              Languages: Spanish (native), English: conversational level, Approved first certificate.
-            </p>
-          </li>
-        </ol>
-      </section>
-
-      <section id="experience" class="scroll-mt-28 mx-auto max-w-[1100px]">
-        <h2 class="mb-6 font-headline text-3xl font-semibold text-primary">Experience</h2>
-
-        <ol class="timeline relative">
-          <li class="timeline-item timeline-item-gap-10 timeline-item-accent mb-10">
-            <article>
-              <h3 class="font-headline text-2xl font-semibold text-on-surface">Capitole Consulting</h3>
-              <h4 class="mb-3 font-headline text-xl font-semibold text-on-surface-variant">
-                AXA (<time datetime="2023-05">May 2023</time> - present day)
-              </h4>
-              <ol class="list-decimal space-y-2 pl-6 font-body text-base leading-7 text-on-surface">
-                <li>
-                  Contributed to the frontend of the Axa Partners group of applications, working on a set of React
-                  apps customizable for different partners through configuration and internationalization.
-                </li>
-                <li>Worked on the integration of PWA support for the apps.</li>
-                <li>
-                  Gained experience in the Azure cloud platform working on configurations for deployment pipelines and
-                  different automatization scripts.
-                </li>
-              </ol>
-            </article>
-          </li>
-
-          <li class="timeline-item timeline-item-gap-10 mb-10">
-            <article>
-              <h3 class="font-headline text-2xl font-semibold text-on-surface">Devborn</h3>
-              <h4 class="mb-3 font-headline text-xl font-semibold text-on-surface-variant">
-                FabFitFun (<time datetime="2023-01">January 2023</time> - <time datetime="2023-04">April 2023</time>)
-              </h4>
-              <ol class="list-decimal space-y-2 pl-6 font-body text-base leading-7 text-on-surface">
-                <li>
-                  Working remotely with the web team on an ecommerce platform that sells seasonal boxes of beauty,
-                  wellness, fashion, and fitness products.
-                </li>
-                <li>Improve integration of A/B testing using Optimizely.</li>
-              </ol>
-
-              <h4 class="mb-3 mt-6 font-headline text-xl font-semibold text-on-surface-variant">
-                Sibly (<time datetime="2021-02">February 2021</time> - <time datetime="2022-12">December 2022</time>)
-              </h4>
-              <ol class="list-decimal space-y-2 pl-6 font-body text-base leading-7 text-on-surface">
-                <li>First experience working remotely with an international team.</li>
-                <li>Replatform: Accomplished a project to refactor an old jquery web app into a new React dashboard.</li>
-                <li>Improved performance and code reliability issues adding typescript to the project.</li>
-                <li>Added jest unit tests to improve code coverage on both components and Store logic.</li>
-                <li>Developed new features working alongside product and designers team.</li>
-                <li>Dealt with complex challenges related to websockets and messaging events using sendbird SDK.</li>
-                <li>
-                  Worked on timezone dependant features for a webapp used by people in different zones of the world.
-                </li>
-                <li>Lead the development of a new web platform for users of sibly.</li>
-                <li>Experience using an AWS setup with s3 and cloudfront.</li>
-              </ol>
-            </article>
-          </li>
-
-          <li class="timeline-item timeline-item-gap-10 mb-10">
-            <article>
-              <h3 class="font-headline text-2xl font-semibold text-on-surface">Bons</h3>
-              <h4 class="mb-3 font-headline text-xl font-semibold text-on-surface-variant">
-                <time datetime="2018-10">October 2018</time> - <time datetime="2021-01">January 2021</time>
-              </h4>
-              <ol class="list-decimal space-y-2 pl-6 font-body text-base leading-7 text-on-surface">
-                <li>
-                  Frontend development of Produck (
-                  <a
-                    class="text-secondary transition-colors hover:text-primary hover:underline"
-                    href="https://www.produck.io/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >https://www.produck.io/</a
-                  >)
-                  Progressive web app built with React and connected to a backend using graphQL query language.
-                </li>
-                <li>
-                  Implemented performance improvements to a React app that has complex components connected to a very
-                  large state using the apollo graphQL client while also considering optimistic results and caching
-                  strategies.
-                </li>
-                <li>Developed a web push notifications feature for produck's webapp notifications system.</li>
-                <li>
-                  Developed react and vuejs web apps integrated to webflow (
-                  <a
-                    class="text-secondary transition-colors hover:text-primary hover:underline"
-                    href="https://webflow.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >https://webflow.com/</a
-                  >)
-                  for many of Bons clients. Using a custom stack with nodeJS + airtable + mongoDB in the backend
-                  served by a Vercel serverless BE.
-                </li>
-              </ol>
-            </article>
-          </li>
-
-          <li class="timeline-item">
-            <article>
-              <h3 class="font-headline text-2xl font-semibold text-on-surface">Despegar.com</h3>
-              <h4 class="mb-3 font-headline text-xl font-semibold text-on-surface-variant">
-                <time datetime="2015-08">August 2015</time> - <time datetime="2018-10">October 2018</time>
-              </h4>
-              <ol class="list-decimal space-y-2 pl-6 font-body text-base leading-7 text-on-surface">
-                <li>
-                  Received training during "Alto Vuelo" course imparted by leaders of backend, frontend and mobile
-                  teams.
-                </li>
-                <li>Development of REST APIs written in JAVA, SCALA and node.js.</li>
-                <li>Development of user interfaces powered by angularjs and React.</li>
-              </ol>
-            </article>
-          </li>
-        </ol>
-      </section>
-    </main>
-
-    <footer class="no-print mt-16 bg-surface-container-low">
-      <div class="mx-auto flex w-full max-w-[1100px] flex-col gap-3 px-[20px] py-6 md:flex-row md:items-center md:justify-between md:px-gutter">
-        <p class="font-headline text-base font-semibold text-on-surface">Leandro Fernandez</p>
-        <p class="font-body text-sm text-on-surface-variant">© 2026 Leandro Fernandez. All rights reserved.</p>
-        <ul class="flex list-none items-center gap-4 pl-0 font-body text-sm">
-          <li>
-            <a
-              class="text-secondary transition-colors hover:text-primary hover:underline"
-              href="https://www.linkedin.com/in/leandro-fernandez-dev"
-              target="_blank"
-              rel="noopener noreferrer"
-              >LinkedIn</a
-            >
+              <span>leandroofernandezz@gmail.com</span>
+            </a>
           </li>
           <li>
-            <a
-              class="text-secondary transition-colors hover:text-primary hover:underline"
-              href="https://github.com/leandroFernandez94"
-              target="_blank"
-              rel="noopener noreferrer"
-              >GitHub</a
-            >
+            <a class="inline-flex items-center gap-2 text-secondary transition-colors hover:text-primary hover:underline"
+              href="https://www.linkedin.com/in/leandro-fernandez-dev" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"
+                aria-hidden="true">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+              <span>/leandro-fernandez-dev</span>
+            </a>
           </li>
           <li>
-            <a
-              class="text-secondary transition-colors hover:text-primary hover:underline"
-              href="mailto:leandroofernandezz@gmail.com"
-              >Email</a
-            >
+            <a class="inline-flex items-center gap-2 text-secondary transition-colors hover:text-primary hover:underline"
+              href="https://github.com/leandroFernandez94" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="18" height="18" fill="currentColor"
+                aria-hidden="true">
+                <path
+                  d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"
+                  transform="scale(64)" />
+              </svg>
+              <span>/leandroFernandez94</span>
+            </a>
           </li>
         </ul>
-      </div>
-    </footer>
-  </body>
+      </address>
+    </header>
+
+    <section id="about" class="scroll-mt-28 mx-auto mb-8 md:mb-12 lg:mb-16 max-w-[1100px] space-y-4">
+      <h2 class="font-headline text-3xl font-semibold text-primary">About Me</h2>
+      <p class="font-body text-lg leading-8 text-on-surface">
+        Software developer from Argentina. Currently living in Barcelona, Spain.
+      </p>
+      <p class="font-body text-lg leading-8 text-on-surface">
+        I develop web apps since 2015. During this time, I had the opportunity to work with a broad range of teams,
+        where I was able to use tools and
+        frameworks and deployed
+        them on different cloud platforms successfully.
+      </p>
+      <p class="font-body text-lg leading-8 text-on-surface">
+        I am currently focused on exploring the AI engineering field using AI agents workflows and exploring how they
+        can improve my productivity and make me a
+        better engineer, always making focus on keeping a balance between innovation and quality
+      </p>
+
+      <h3 class="pt-2 font-headline text-xl font-semibold text-on-surface">Things I find motivating:</h3>
+      <ul class="list-decimal space-y-2 pl-6 font-body text-base leading-7 text-on-surface">
+        <li>Coming up with ideas that could be transformed into helpful utilities.</li>
+        <li>
+          Elaborating solutions for challenging technical problems and documenting them the best way I can.
+        </li>
+        <li>Finding ways to improve the UX of the projects I work on.</li>
+      </ul>
+    </section>
+
+    <section id="education" class="scroll-mt-28 mx-auto mb-8 md:mb-12 lg:mb-16 max-w-[1100px]">
+      <h2 class="mb-6 font-headline text-3xl font-semibold text-primary">Education</h2>
+      <ol class="timeline relative">
+        <li class="timeline-item timeline-item-gap-6 mb-6">
+          <p class="font-body text-base leading-7 text-on-surface">
+            Currently focused on applying to courses and workshops to keep myself updated in terms of new
+            technologies that can help me become a better engineer.
+          </p>
+        </li>
+        <li class="timeline-item timeline-item-gap-6 mb-6">
+          <p class="font-body text-base leading-7 text-on-surface">
+            Systems Engineering at
+            <a class="text-secondary transition-colors hover:text-primary hover:underline"
+              href="https://en.wikipedia.org/wiki/National_Technological_University" target="_blank"
+              rel="noopener noreferrer">UTN</a>,
+            <time datetime="2013">2013</time> - dropped in <time datetime="2018">2018</time>.
+          </p>
+        </li>
+        <li class="timeline-item timeline-item-gap-6 mb-6">
+          <p class="font-body text-base leading-7 text-on-surface">
+            Computer Technician at E.T. 35 D.E. 18 Ing. Eduardo Latzina,
+            <time datetime="2008">2008</time> - <time datetime="2013">2013</time>.
+          </p>
+        </li>
+        <li class="timeline-item">
+          <p class="font-body text-base leading-7 text-on-surface">
+            Languages: Spanish (native), English: B2 certificate, conversational level.
+          </p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="experience" class="scroll-mt-28 mx-auto max-w-[1100px]">
+      <h2 class="mb-6 font-headline text-3xl font-semibold text-primary">Experience</h2>
+
+      <ol class="timeline relative">
+        <li class="timeline-item timeline-item-gap-10 timeline-item-accent mb-10">
+          <article>
+            <h3 class="font-headline text-2xl font-semibold text-on-surface">Capitole Consulting</h3>
+            <h4 class="mb-3 font-headline text-xl font-semibold text-on-surface-variant">
+              AXA (<time datetime="2023-05">May 2023</time> - present day)
+            </h4>
+            <ol class="list-decimal space-y-2 pl-6 font-body text-base leading-7 text-on-surface">
+              <li>
+                Contributed to the frontend of the Axa Partners group of applications, working on a set of React
+                apps customizable for different partners through configuration and internationalization.
+              </li>
+              <li>Worked on the integration of PWA support for the apps.</li>
+              <li>
+                Gained experience in the Azure cloud platform working on configurations for deployment pipelines and
+                different automatization scripts.
+              </li>
+            </ol>
+          </article>
+        </li>
+
+        <li class="timeline-item timeline-item-gap-10 mb-10">
+          <article>
+            <h3 class="font-headline text-2xl font-semibold text-on-surface">Devborn</h3>
+            <h4 class="mb-3 font-headline text-xl font-semibold text-on-surface-variant">
+              FabFitFun (<time datetime="2023-01">January 2023</time> - <time datetime="2023-04">April 2023</time>)
+            </h4>
+            <ol class="list-decimal space-y-2 pl-6 font-body text-base leading-7 text-on-surface">
+              <li>
+                Working remotely with the web team on an ecommerce platform that sells seasonal boxes of beauty,
+                wellness, fashion, and fitness products.
+              </li>
+              <li>Improve integration of A/B testing using Optimizely.</li>
+            </ol>
+
+            <h4 class="mb-3 mt-6 font-headline text-xl font-semibold text-on-surface-variant">
+              Sibly (<time datetime="2021-02">February 2021</time> - <time datetime="2022-12">December 2022</time>)
+            </h4>
+            <ol class="list-decimal space-y-2 pl-6 font-body text-base leading-7 text-on-surface">
+              <li>First experience working remotely with an international team.</li>
+              <li>Replatform: Accomplished a project to refactor an old jquery web app into a new React dashboard.</li>
+              <li>Improved performance and code reliability issues adding typescript to the project.</li>
+              <li>Added jest unit tests to improve code coverage on both components and Store logic.</li>
+              <li>Developed new features working alongside product and designers team.</li>
+              <li>Dealt with complex challenges related to websockets and messaging events using sendbird SDK.</li>
+              <li>
+                Worked on timezone dependant features for a webapp used by people in different zones of the world.
+              </li>
+              <li>Lead the development of a new web platform for users of sibly.</li>
+              <li>Experience using an AWS setup with s3 and cloudfront.</li>
+            </ol>
+          </article>
+        </li>
+
+        <li class="timeline-item timeline-item-gap-10 mb-10">
+          <article>
+            <h3 class="font-headline text-2xl font-semibold text-on-surface">Bons</h3>
+            <h4 class="mb-3 font-headline text-xl font-semibold text-on-surface-variant">
+              <time datetime="2018-10">October 2018</time> - <time datetime="2021-01">January 2021</time>
+            </h4>
+            <ol class="list-decimal space-y-2 pl-6 font-body text-base leading-7 text-on-surface">
+              <li>
+                Frontend development of Produck (
+                <a class="text-secondary transition-colors hover:text-primary hover:underline"
+                  href="https://www.produck.io/" target="_blank" rel="noopener noreferrer">https://www.produck.io/</a>)
+                Progressive web app built with React and connected to a backend using graphQL query language.
+              </li>
+              <li>
+                Implemented performance improvements to a React app that has complex components connected to a very
+                large state using the apollo graphQL client while also considering optimistic results and caching
+                strategies.
+              </li>
+              <li>Developed a web push notifications feature for produck's webapp notifications system.</li>
+              <li>
+                Developed react and vuejs web apps integrated to webflow (
+                <a class="text-secondary transition-colors hover:text-primary hover:underline"
+                  href="https://webflow.com/" target="_blank" rel="noopener noreferrer">https://webflow.com/</a>)
+                for many of Bons clients. Using a custom stack with nodeJS + airtable + mongoDB in the backend
+                served by a Vercel serverless BE.
+              </li>
+            </ol>
+          </article>
+        </li>
+
+        <li class="timeline-item">
+          <article>
+            <h3 class="font-headline text-2xl font-semibold text-on-surface">Despegar.com</h3>
+            <h4 class="mb-3 font-headline text-xl font-semibold text-on-surface-variant">
+              <time datetime="2015-08">August 2015</time> - <time datetime="2018-10">October 2018</time>
+            </h4>
+            <ol class="list-decimal space-y-2 pl-6 font-body text-base leading-7 text-on-surface">
+              <li>
+                Received training during "Alto Vuelo" course imparted by leaders of backend, frontend and mobile
+                teams.
+              </li>
+              <li>Development of REST APIs written in JAVA, SCALA and node.js.</li>
+              <li>Development of user interfaces powered by angularjs and React.</li>
+            </ol>
+          </article>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="no-print mt-16 bg-surface-container-low">
+    <div
+      class="mx-auto flex w-full max-w-[1100px] flex-col gap-3 px-[20px] py-6 md:flex-row md:items-center md:justify-between md:px-gutter">
+      <p class="font-headline text-base font-semibold text-on-surface">Leandro Fernandez</p>
+      <p class="font-body text-sm text-on-surface-variant">© 2026 Leandro Fernandez. All rights reserved.</p>
+      <ul class="flex list-none items-center gap-4 pl-0 font-body text-sm">
+        <li>
+          <a class="text-secondary transition-colors hover:text-primary hover:underline"
+            href="https://www.linkedin.com/in/leandro-fernandez-dev" target="_blank"
+            rel="noopener noreferrer">LinkedIn</a>
+        </li>
+        <li>
+          <a class="text-secondary transition-colors hover:text-primary hover:underline"
+            href="https://github.com/leandroFernandez94" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </li>
+        <li>
+          <a class="text-secondary transition-colors hover:text-primary hover:underline"
+            href="mailto:leandroofernandezz@gmail.com">Email</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</body>
+
 </html>
