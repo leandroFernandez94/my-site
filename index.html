@@ -308,9 +308,14 @@
         margin-top: 0.75rem !important;
       }
 
-      /* Avoid page breaks */
+      /* Allow sections and articles to flow across pages naturally */
       section,
-      article,
+      article {
+        page-break-inside: auto;
+        break-inside: auto;
+      }
+
+      /* Avoid breaking individual list items and headings */
       li {
         page-break-inside: avoid;
         break-inside: avoid;
