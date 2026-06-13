@@ -371,6 +371,24 @@
       <ol class="timeline relative">
         <li class="timeline-item timeline-item-gap-10 timeline-item-accent mb-10">
           <article>
+            <h3 class="font-headline text-2xl font-semibold text-on-surface">{{experience.axaPartners.company}}</h3>
+            <h4 class="mb-3 font-headline text-xl font-semibold text-on-surface-variant">
+              {{experience.axaPartners.project}} (<time datetime="2024-06">{{experience.axaPartners.period.start}}</time> - {{experience.axaPartners.period.end}})
+            </h4>
+            <ol class="list-decimal space-y-2 pl-6 font-body text-base leading-7 text-on-surface">
+              <li>
+                {{experience.axaPartners.items.item1}}
+              </li>
+              <li>{{experience.axaPartners.items.item2}}</li>
+              <li>
+                {{experience.axaPartners.items.item3}}
+              </li>
+            </ol>
+          </article>
+        </li>
+
+        <li class="timeline-item timeline-item-gap-10 mb-10">
+          <article>
             <h3 class="font-headline text-2xl font-semibold text-on-surface">{{experience.capitole.company}}</h3>
             <h4 class="mb-3 font-headline text-xl font-semibold text-on-surface-variant">
               {{experience.capitole.project}} (<time datetime="2023-05">{{experience.capitole.period.start}}</time> - {{experience.capitole.period.end}})
