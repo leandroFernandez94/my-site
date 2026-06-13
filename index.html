@@ -261,7 +261,8 @@
   <main class="mx-auto w-full max-w-[1100px] px-[20px] pb-16 pt-28 md:px-gutter">
     <header class="mx-auto mb-8 md:mb-12 lg:mb-16 max-w-[1100px] text-center">
       <h1 class="font-headline text-4xl font-bold text-primary sm:text-5xl">{{header.name}}</h1>
-      <p class="mt-4 font-label text-sm font-medium uppercase tracking-[0.14em] text-on-surface-variant">{{header.role}}</p>
+      <p class="mt-4 font-label text-sm font-medium uppercase tracking-[0.14em] text-on-surface-variant">{{header.role}}
+      </p>
 
 
       <address class="mx-auto mt-8 not-italic">
@@ -323,7 +324,9 @@
       <p class="font-body text-lg leading-8 text-on-surface">
         {{about.paragraph3}}
       </p>
-
+      <p class="font-body text-lg leading-8 text-on-surface">
+        {{about.paragraph4}}
+      </p>
       <h3 class="pt-2 font-headline text-xl font-semibold text-on-surface">{{about.motivatingHeading}}</h3>
       <ul class="list-decimal space-y-2 pl-6 font-body text-base leading-7 text-on-surface">
         <li>{{about.motivations.item1}}</li>
@@ -348,13 +351,15 @@
             <a class="text-secondary transition-colors hover:text-primary hover:underline"
               href="https://en.wikipedia.org/wiki/National_Technological_University" target="_blank"
               rel="noopener noreferrer">{{education.utn.linkText}}</a>,
-            <time datetime="2013">{{education.utn.startYear}}</time>{{education.utn.endPrefix}} <time datetime="2018">{{education.utn.endYear}}</time>{{education.utn.endSuffix}}
+            <time datetime="2013">{{education.utn.startYear}}</time>{{education.utn.endPrefix}} <time
+              datetime="2018">{{education.utn.endYear}}</time>{{education.utn.endSuffix}}
           </p>
         </li>
         <li class="timeline-item timeline-item-gap-6 mb-6">
           <p class="font-body text-base leading-7 text-on-surface">
             {{education.technician.prefix}}
-            <time datetime="2008">{{education.technician.startYear}}</time>{{education.technician.endPrefix}} <time datetime="2013">{{education.technician.endYear}}</time>{{education.technician.endSuffix}}
+            <time datetime="2008">{{education.technician.startYear}}</time>{{education.technician.endPrefix}} <time
+              datetime="2013">{{education.technician.endYear}}</time>{{education.technician.endSuffix}}
           </p>
         </li>
         <li class="timeline-item">
@@ -373,7 +378,8 @@
           <article>
             <h3 class="font-headline text-2xl font-semibold text-on-surface">{{experience.capitole.company}}</h3>
             <h4 class="mb-3 font-headline text-xl font-semibold text-on-surface-variant">
-              {{experience.capitole.project}} (<time datetime="2023-05">{{experience.capitole.period.start}}</time> - {{experience.capitole.period.end}})
+              {{experience.capitole.project}} (<time datetime="2023-05">{{experience.capitole.period.start}}</time> -
+              {{experience.capitole.period.end}})
             </h4>
             <ol class="list-decimal space-y-2 pl-6 font-body text-base leading-7 text-on-surface">
               <li>
@@ -391,7 +397,9 @@
           <article>
             <h3 class="font-headline text-2xl font-semibold text-on-surface">{{experience.devborn.company}}</h3>
             <h4 class="mb-3 font-headline text-xl font-semibold text-on-surface-variant">
-              {{experience.devborn.fabfitfun.name}} (<time datetime="2023-01">{{experience.devborn.fabfitfun.period.start}}</time> - <time datetime="2023-04">{{experience.devborn.fabfitfun.period.end}}</time>)
+              {{experience.devborn.fabfitfun.name}} (<time
+                datetime="2023-01">{{experience.devborn.fabfitfun.period.start}}</time> - <time
+                datetime="2023-04">{{experience.devborn.fabfitfun.period.end}}</time>)
             </h4>
             <ol class="list-decimal space-y-2 pl-6 font-body text-base leading-7 text-on-surface">
               <li>
@@ -401,7 +409,9 @@
             </ol>
 
             <h4 class="mb-3 mt-6 font-headline text-xl font-semibold text-on-surface-variant">
-              {{experience.devborn.sibly.name}} (<time datetime="2021-02">{{experience.devborn.sibly.period.start}}</time> - <time datetime="2022-12">{{experience.devborn.sibly.period.end}}</time>)
+              {{experience.devborn.sibly.name}} (<time
+                datetime="2021-02">{{experience.devborn.sibly.period.start}}</time> - <time
+                datetime="2022-12">{{experience.devborn.sibly.period.end}}</time>)
             </h4>
             <ol class="list-decimal space-y-2 pl-6 font-body text-base leading-7 text-on-surface">
               <li>{{experience.devborn.sibly.items.item1}}</li>
@@ -423,13 +433,15 @@
           <article>
             <h3 class="font-headline text-2xl font-semibold text-on-surface">{{experience.bons.company}}</h3>
             <h4 class="mb-3 font-headline text-xl font-semibold text-on-surface-variant">
-              <time datetime="2018-10">{{experience.bons.period.start}}</time> - <time datetime="2021-01">{{experience.bons.period.end}}</time>
+              <time datetime="2018-10">{{experience.bons.period.start}}</time> - <time
+                datetime="2021-01">{{experience.bons.period.end}}</time>
             </h4>
             <ol class="list-decimal space-y-2 pl-6 font-body text-base leading-7 text-on-surface">
               <li>
                 {{experience.bons.items.item1Prefix}}
                 <a class="text-secondary transition-colors hover:text-primary hover:underline"
-                  href="https://www.produck.io/" target="_blank" rel="noopener noreferrer">{{experience.bons.items.item1LinkText}}</a>{{experience.bons.items.item1Suffix}}
+                  href="https://www.produck.io/" target="_blank"
+                  rel="noopener noreferrer">{{experience.bons.items.item1LinkText}}</a>{{experience.bons.items.item1Suffix}}
               </li>
               <li>
                 {{experience.bons.items.item2}}
@@ -438,7 +450,8 @@
               <li>
                 {{experience.bons.items.item4Prefix}}
                 <a class="text-secondary transition-colors hover:text-primary hover:underline"
-                  href="https://webflow.com/" target="_blank" rel="noopener noreferrer">{{experience.bons.items.item4LinkText}}</a>{{experience.bons.items.item4Suffix}}
+                  href="https://webflow.com/" target="_blank"
+                  rel="noopener noreferrer">{{experience.bons.items.item4LinkText}}</a>{{experience.bons.items.item4Suffix}}
               </li>
             </ol>
           </article>
@@ -448,7 +461,8 @@
           <article>
             <h3 class="font-headline text-2xl font-semibold text-on-surface">{{experience.despegar.company}}</h3>
             <h4 class="mb-3 font-headline text-xl font-semibold text-on-surface-variant">
-              <time datetime="2015-08">{{experience.despegar.period.start}}</time> - <time datetime="2018-10">{{experience.despegar.period.end}}</time>
+              <time datetime="2015-08">{{experience.despegar.period.start}}</time> - <time
+                datetime="2018-10">{{experience.despegar.period.end}}</time>
             </h4>
             <ol class="list-decimal space-y-2 pl-6 font-body text-base leading-7 text-on-surface">
               <li>
@@ -476,7 +490,8 @@
         </li>
         <li>
           <a class="text-secondary transition-colors hover:text-primary hover:underline"
-            href="https://github.com/leandroFernandez94" target="_blank" rel="noopener noreferrer">{{footer.links.github}}</a>
+            href="https://github.com/leandroFernandez94" target="_blank"
+            rel="noopener noreferrer">{{footer.links.github}}</a>
         </li>
         <li>
           <a class="text-secondary transition-colors hover:text-primary hover:underline"
