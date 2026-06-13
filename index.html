@@ -168,7 +168,7 @@
 
     @media print {
       @page {
-        margin: 2cm;
+        margin: 1.5cm;
       }
 
       .no-print {
@@ -177,10 +177,15 @@
 
       * {
         color: #000 !important;
-        background: #fff !important;
+        background: transparent !important;
         box-shadow: none !important;
         text-shadow: none !important;
         backdrop-filter: none !important;
+      }
+
+      body {
+        font-size: 10pt !important;
+        line-height: 1.35 !important;
       }
 
       body,
@@ -188,34 +193,86 @@
       section,
       article {
         margin: 0 !important;
-        max-width: none !important;
-      }
-
-      body,
-      main {
         padding: 0 !important;
+        max-width: none !important;
       }
 
       a,
       a:visited {
         color: #000 !important;
-        text-decoration: underline !important;
+        text-decoration: none !important;
       }
 
       a[href]:not([href^="mailto:"])::after {
-        content: " (" attr(href) ")";
-        font-size: 0.85em;
-        font-weight: 400;
-        word-break: break-all;
+        content: none !important;
       }
 
+      /* Hide header links section */
+      header address {
+        display: none !important;
+      }
+
+      /* Compact header */
+      header {
+        margin-bottom: 0.75rem !important;
+      }
+
+      header h1 {
+        font-size: 1.4rem !important;
+        margin-bottom: 0.25rem !important;
+      }
+
+      header p {
+        font-size: 0.75rem !important;
+        margin-top: 0.25rem !important;
+      }
+
+      /* Compact headings */
+      h2 {
+        font-size: 1.1rem !important;
+        margin-bottom: 0.5rem !important;
+        margin-top: 0.75rem !important;
+      }
+
+      h3 {
+        font-size: 1rem !important;
+        margin-bottom: 0.25rem !important;
+      }
+
+      h4 {
+        font-size: 0.9rem !important;
+        margin-bottom: 0.25rem !important;
+      }
+
+      /* Compact body text */
+      p {
+        font-size: 0.85rem !important;
+        line-height: 1.35 !important;
+        margin-bottom: 0.35rem !important;
+      }
+
+      /* Remove cards but keep content */
+      .experience-card,
+      .experience-card * {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+      }
+
+      .experience-card {
+        margin-bottom: 0.75rem !important;
+      }
+
+      /* Flatten timeline */
       .timeline {
         border-left: none !important;
         padding-left: 0 !important;
       }
 
       .timeline-item {
-        margin-bottom: 1rem !important;
+        margin-bottom: 0.5rem !important;
         padding-left: 0 !important;
       }
 
@@ -224,14 +281,45 @@
         content: none !important;
       }
 
-      .experience-card {
-        background: transparent !important;
-        border: 1px solid #e0e3e5 !important;
-        box-shadow: none !important;
+      /* Tighten spacing */
+      .space-y-2 > * + * {
+        margin-top: 0.25rem !important;
       }
 
+      .space-y-4 > * + * {
+        margin-top: 0.5rem !important;
+      }
+
+      .mb-6,
+      .mb-8,
+      .mb-10,
+      .mb-16 {
+        margin-bottom: 0.5rem !important;
+      }
+
+      .mt-4,
+      .mt-8,
+      .mt-16 {
+        margin-top: 0.5rem !important;
+      }
+
+      .pt-4 {
+        padding-top: 0.25rem !important;
+      }
+
+      /* Section gaps */
+      section + section {
+        margin-top: 0.75rem !important;
+      }
+
+      /* Allow sections and articles to flow across pages naturally */
       section,
-      article,
+      article {
+        page-break-inside: auto;
+        break-inside: auto;
+      }
+
+      /* Avoid breaking individual list items and headings */
       li {
         page-break-inside: avoid;
         break-inside: avoid;
