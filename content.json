@@ -47,7 +47,7 @@
   "about": {
     "heading": "About Me",
     "paragraph1": "Software developer from Argentina. Currently living in Barcelona, Spain.",
-    "paragraph2": "I develop web apps since 2015. During this time, I had the opportunity to work with a broad range of teams, where I was able to use tools and frameworks and deploy them on different cloud platforms successfully.",
+    "paragraph2": "I develop web apps since 2015. During this time, I had the opportunity to work with a broad range of teams, where I was able to use tools and frameworks and deploy applications on different cloud platforms successfully.",
     "paragraph3": "I am currently focused on exploring the AI engineering field using agents for my workflows and exploring how they can improve my productivity and make me a better engineer, always trying to keep a balance between innovation and quality.",
     "paragraph4": "In my free time, I enjoy playing with my home server and automating stuff around the house."
   },
@@ -81,9 +81,9 @@
         "end": "Present"
       },
       "items": {
-        "item1": "Joined the AI champions program and contributed to AI tooling adoption in AXA partners development teams, integrating Github Copilot after receiving training from Microsoft",
-        "item2": "Improved development experience of the team by introducing AI tools to the workflow",
-        "item3": "Continued contributing to the AXA Partners web applications"
+        "item1": "Joined the AI champions program and contributed to AI tooling adoption in AXA partners development teams, integrating Github Copilot after receiving training from Microsoft.",
+        "item2": "Improved development experience of the team by introducing AI tools to the workflow.",
+        "item3": "Continued contributing to the AXA Partners web applications."
       }
     },
     "capitole": {

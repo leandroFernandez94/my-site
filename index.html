@@ -168,7 +168,7 @@
 
     @media print {
       @page {
-        margin: 2cm;
+        margin: 1.5cm;
       }
 
       .no-print {
@@ -177,10 +177,15 @@
 
       * {
         color: #000 !important;
-        background: #fff !important;
+        background: transparent !important;
         box-shadow: none !important;
         text-shadow: none !important;
         backdrop-filter: none !important;
+      }
+
+      body {
+        font-size: 10pt !important;
+        line-height: 1.35 !important;
       }
 
       body,
@@ -188,34 +193,86 @@
       section,
       article {
         margin: 0 !important;
-        max-width: none !important;
-      }
-
-      body,
-      main {
         padding: 0 !important;
+        max-width: none !important;
       }
 
       a,
       a:visited {
         color: #000 !important;
-        text-decoration: underline !important;
+        text-decoration: none !important;
       }
 
       a[href]:not([href^="mailto:"])::after {
-        content: " (" attr(href) ")";
-        font-size: 0.85em;
-        font-weight: 400;
-        word-break: break-all;
+        content: none !important;
       }
 
+      /* Hide header links section */
+      header address {
+        display: none !important;
+      }
+
+      /* Compact header */
+      header {
+        margin-bottom: 0.75rem !important;
+      }
+
+      header h1 {
+        font-size: 1.4rem !important;
+        margin-bottom: 0.25rem !important;
+      }
+
+      header p {
+        font-size: 0.75rem !important;
+        margin-top: 0.25rem !important;
+      }
+
+      /* Compact headings */
+      h2 {
+        font-size: 1.1rem !important;
+        margin-bottom: 0.5rem !important;
+        margin-top: 0.75rem !important;
+      }
+
+      h3 {
+        font-size: 1rem !important;
+        margin-bottom: 0.25rem !important;
+      }
+
+      h4 {
+        font-size: 0.9rem !important;
+        margin-bottom: 0.25rem !important;
+      }
+
+      /* Compact body text */
+      p {
+        font-size: 0.85rem !important;
+        line-height: 1.35 !important;
+        margin-bottom: 0.35rem !important;
+      }
+
+      /* Remove cards but keep content */
+      .experience-card,
+      .experience-card * {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+      }
+
+      .experience-card {
+        margin-bottom: 0.75rem !important;
+      }
+
+      /* Flatten timeline */
       .timeline {
         border-left: none !important;
         padding-left: 0 !important;
       }
 
       .timeline-item {
-        margin-bottom: 1rem !important;
+        margin-bottom: 0.5rem !important;
         padding-left: 0 !important;
       }
 
@@ -224,8 +281,45 @@
         content: none !important;
       }
 
+      /* Tighten spacing */
+      .space-y-2 > * + * {
+        margin-top: 0.25rem !important;
+      }
+
+      .space-y-4 > * + * {
+        margin-top: 0.5rem !important;
+      }
+
+      .mb-6,
+      .mb-8,
+      .mb-10,
+      .mb-16 {
+        margin-bottom: 0.5rem !important;
+      }
+
+      .mt-4,
+      .mt-8,
+      .mt-16 {
+        margin-top: 0.5rem !important;
+      }
+
+      .pt-4 {
+        padding-top: 0.25rem !important;
+      }
+
+      /* Section gaps */
+      section + section {
+        margin-top: 0.75rem !important;
+      }
+
+      /* Allow sections and articles to flow across pages naturally */
       section,
-      article,
+      article {
+        page-break-inside: auto;
+        break-inside: auto;
+      }
+
+      /* Avoid breaking individual list items and headings */
       li {
         page-break-inside: avoid;
         break-inside: avoid;
@@ -327,14 +421,6 @@
       <p class="font-body text-lg leading-8 text-on-surface">
         {{about.paragraph4}}
       </p>
-      <h3 class="pt-2 font-headline text-xl font-semibold text-on-surface">{{about.motivatingHeading}}</h3>
-      <ul class="list-decimal space-y-2 pl-6 font-body text-base leading-7 text-on-surface">
-        <li>{{about.motivations.item1}}</li>
-        <li>
-          {{about.motivations.item2}}
-        </li>
-        <li>{{about.motivations.item3}}</li>
-      </ul>
     </section>
 
     <section id="education" class="scroll-mt-28 mx-auto mb-8 md:mb-12 lg:mb-16 max-w-[1100px]">
@@ -375,120 +461,109 @@
 
       <ol class="timeline relative">
         <li class="timeline-item timeline-item-gap-10 timeline-item-accent mb-10">
-          <article>
+          <article class="experience-card border border-outline-variant/40 rounded-lg shadow-sm p-5">
             <h3 class="font-headline text-2xl font-semibold text-on-surface">{{experience.axaPartners.company}}</h3>
             <h4 class="mb-3 font-headline text-xl font-semibold text-on-surface-variant">
-              {{experience.axaPartners.project}} (<time datetime="2024-06">{{experience.axaPartners.period.start}}</time> - {{experience.axaPartners.period.end}})
+              {{experience.axaPartners.project}} (<time
+                datetime="2024-06">{{experience.axaPartners.period.start}}</time> -
+              {{experience.axaPartners.period.end}})
             </h4>
-            <ol class="list-decimal space-y-2 pl-6 font-body text-base leading-7 text-on-surface">
-              <li>
-                {{experience.axaPartners.items.item1}}
-              </li>
-              <li>{{experience.axaPartners.items.item2}}</li>
-              <li>
-                {{experience.axaPartners.items.item3}}
-              </li>
-            </ol>
+            <div class="space-y-2 font-body text-base leading-7 text-on-surface">
+              <p>{{experience.axaPartners.items.item1}}</p>
+              <p>{{experience.axaPartners.items.item2}}</p>
+              <p>{{experience.axaPartners.items.item3}}</p>
+            </div>
           </article>
         </li>
 
         <li class="timeline-item timeline-item-gap-10 mb-10">
-          <article>
+          <article class="experience-card border border-outline-variant/40 rounded-lg shadow-sm p-5">
             <h3 class="font-headline text-2xl font-semibold text-on-surface">{{experience.capitole.company}}</h3>
             <h4 class="mb-3 font-headline text-xl font-semibold text-on-surface-variant">
               {{experience.capitole.project}} (<time datetime="2023-05">{{experience.capitole.period.start}}</time> -
               {{experience.capitole.period.end}})
             </h4>
-            <ol class="list-decimal space-y-2 pl-6 font-body text-base leading-7 text-on-surface">
-              <li>
-                {{experience.capitole.items.item1}}
-              </li>
-              <li>{{experience.capitole.items.item2}}</li>
-              <li>
-                {{experience.capitole.items.item3}}
-              </li>
-            </ol>
+            <div class="space-y-2 font-body text-base leading-7 text-on-surface">
+              <p>{{experience.capitole.items.item1}}</p>
+              <p>{{experience.capitole.items.item2}}</p>
+              <p>{{experience.capitole.items.item3}}</p>
+            </div>
           </article>
         </li>
 
         <li class="timeline-item timeline-item-gap-10 mb-10">
-          <article>
+          <article class="experience-card border border-outline-variant/40 rounded-lg shadow-sm p-5">
             <h3 class="font-headline text-2xl font-semibold text-on-surface">{{experience.devborn.company}}</h3>
-            <h4 class="mb-3 font-headline text-xl font-semibold text-on-surface-variant">
-              {{experience.devborn.fabfitfun.name}} (<time
-                datetime="2023-01">{{experience.devborn.fabfitfun.period.start}}</time> - <time
-                datetime="2023-04">{{experience.devborn.fabfitfun.period.end}}</time>)
-            </h4>
-            <ol class="list-decimal space-y-2 pl-6 font-body text-base leading-7 text-on-surface">
-              <li>
-                {{experience.devborn.fabfitfun.items.item1}}
-              </li>
-              <li>{{experience.devborn.fabfitfun.items.item2}}</li>
-            </ol>
 
-            <h4 class="mb-3 mt-6 font-headline text-xl font-semibold text-on-surface-variant">
-              {{experience.devborn.sibly.name}} (<time
-                datetime="2021-02">{{experience.devborn.sibly.period.start}}</time> - <time
-                datetime="2022-12">{{experience.devborn.sibly.period.end}}</time>)
-            </h4>
-            <ol class="list-decimal space-y-2 pl-6 font-body text-base leading-7 text-on-surface">
-              <li>{{experience.devborn.sibly.items.item1}}</li>
-              <li>{{experience.devborn.sibly.items.item2}}</li>
-              <li>{{experience.devborn.sibly.items.item3}}</li>
-              <li>{{experience.devborn.sibly.items.item4}}</li>
-              <li>{{experience.devborn.sibly.items.item5}}</li>
-              <li>{{experience.devborn.sibly.items.item6}}</li>
-              <li>
-                {{experience.devborn.sibly.items.item7}}
-              </li>
-              <li>{{experience.devborn.sibly.items.item8}}</li>
-              <li>{{experience.devborn.sibly.items.item9}}</li>
-            </ol>
+            <div class="mt-4">
+              <h4 class="mb-3 font-headline text-xl font-semibold text-on-surface-variant">
+                {{experience.devborn.fabfitfun.name}} (<time
+                  datetime="2023-01">{{experience.devborn.fabfitfun.period.start}}</time> - <time
+                  datetime="2023-04">{{experience.devborn.fabfitfun.period.end}}</time>)
+              </h4>
+              <div class="space-y-2 font-body text-base leading-7 text-on-surface">
+                <p>{{experience.devborn.fabfitfun.items.item1}}</p>
+                <p>{{experience.devborn.fabfitfun.items.item2}}</p>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-4 border-t border-outline-variant/30">
+              <h4 class="mb-3 font-headline text-xl font-semibold text-on-surface-variant">
+                {{experience.devborn.sibly.name}} (<time
+                  datetime="2021-02">{{experience.devborn.sibly.period.start}}</time> - <time
+                  datetime="2022-12">{{experience.devborn.sibly.period.end}}</time>)
+              </h4>
+              <div class="space-y-2 font-body text-base leading-7 text-on-surface">
+                <p>{{experience.devborn.sibly.items.item1}}</p>
+                <p>{{experience.devborn.sibly.items.item2}}</p>
+                <p>{{experience.devborn.sibly.items.item3}}</p>
+                <p>{{experience.devborn.sibly.items.item4}}</p>
+                <p>{{experience.devborn.sibly.items.item5}}</p>
+                <p>{{experience.devborn.sibly.items.item6}}</p>
+                <p>{{experience.devborn.sibly.items.item7}}</p>
+                <p>{{experience.devborn.sibly.items.item8}}</p>
+                <p>{{experience.devborn.sibly.items.item9}}</p>
+              </div>
+            </div>
           </article>
         </li>
 
         <li class="timeline-item timeline-item-gap-10 mb-10">
-          <article>
+          <article class="experience-card border border-outline-variant/40 rounded-lg shadow-sm p-5">
             <h3 class="font-headline text-2xl font-semibold text-on-surface">{{experience.bons.company}}</h3>
             <h4 class="mb-3 font-headline text-xl font-semibold text-on-surface-variant">
               <time datetime="2018-10">{{experience.bons.period.start}}</time> - <time
                 datetime="2021-01">{{experience.bons.period.end}}</time>
             </h4>
-            <ol class="list-decimal space-y-2 pl-6 font-body text-base leading-7 text-on-surface">
-              <li>
-                {{experience.bons.items.item1Prefix}}
+            <div class="space-y-2 font-body text-base leading-7 text-on-surface">
+              <p>{{experience.bons.items.item1Prefix}}
                 <a class="text-secondary transition-colors hover:text-primary hover:underline"
                   href="https://www.produck.io/" target="_blank"
                   rel="noopener noreferrer">{{experience.bons.items.item1LinkText}}</a>{{experience.bons.items.item1Suffix}}
-              </li>
-              <li>
-                {{experience.bons.items.item2}}
-              </li>
-              <li>{{experience.bons.items.item3}}</li>
-              <li>
-                {{experience.bons.items.item4Prefix}}
+              </p>
+              <p>{{experience.bons.items.item2}}</p>
+              <p>{{experience.bons.items.item3}}</p>
+              <p>{{experience.bons.items.item4Prefix}}
                 <a class="text-secondary transition-colors hover:text-primary hover:underline"
                   href="https://webflow.com/" target="_blank"
                   rel="noopener noreferrer">{{experience.bons.items.item4LinkText}}</a>{{experience.bons.items.item4Suffix}}
-              </li>
-            </ol>
+              </p>
+            </div>
           </article>
         </li>
 
         <li class="timeline-item">
-          <article>
+          <article class="experience-card border border-outline-variant/40 rounded-lg shadow-sm p-5">
             <h3 class="font-headline text-2xl font-semibold text-on-surface">{{experience.despegar.company}}</h3>
             <h4 class="mb-3 font-headline text-xl font-semibold text-on-surface-variant">
               <time datetime="2015-08">{{experience.despegar.period.start}}</time> - <time
                 datetime="2018-10">{{experience.despegar.period.end}}</time>
             </h4>
-            <ol class="list-decimal space-y-2 pl-6 font-body text-base leading-7 text-on-surface">
-              <li>
-                {{experience.despegar.items.item1}}
-              </li>
-              <li>{{experience.despegar.items.item2}}</li>
-              <li>{{experience.despegar.items.item3}}</li>
-            </ol>
+            <div class="space-y-2 font-body text-base leading-7 text-on-surface">
+              <p>{{experience.despegar.items.item1}}</p>
+              <p>{{experience.despegar.items.item2}}</p>
+              <p>{{experience.despegar.items.item3}}</p>
+            </div>
           </article>
         </li>
       </ol>
