@@ -25,7 +25,9 @@ function loadEnv() {
 loadEnv();
 
 const PORT = parseInt(process.env.PORT || "5173", 10);
-const ROOT = path.join(__dirname, "..");
+const ROOT = process.env.SERVE_DIR
+  ? path.resolve(process.env.SERVE_DIR)
+  : path.join(__dirname, "..");
 
 function getNetworkIP() {
   const ifaces = os.networkInterfaces();
@@ -90,6 +92,7 @@ server.listen(PORT, "0.0.0.0", () => {
   console.log("");
   console.log(`  ✅ Serving on  http://localhost:${PORT}`);
   console.log(`  🌐 Network:    http://${NETWORK_IP}:${PORT}`);
+  console.log(`  📁 Directory:  ${ROOT}`);
   console.log("");
   console.log("  Press Ctrl+C to stop");
   console.log("");
