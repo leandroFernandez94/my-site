@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { replaceFromFiles } = require('./replace');
 
 // Simple build script for Cloudflare Pages
 // Copies static files to dist/ directory
@@ -7,14 +8,16 @@ const path = require('path');
 const distDir = path.join(__dirname, '..', 'dist');
 const publicDir = path.join(__dirname, '..', 'public');
 const indexHtml = path.join(__dirname, '..', 'index.html');
+const contentJson = path.join(__dirname, '..', 'content.json');
 
 // Create dist directory
 if (!fs.existsSync(distDir)) {
   fs.mkdirSync(distDir, { recursive: true });
 }
 
-// Copy index.html
-fs.copyFileSync(indexHtml, path.join(distDir, 'index.html'));
+// Process template index.html with content.json
+const processedHtml = replaceFromFiles(indexHtml, contentJson);
+fs.writeFileSync(path.join(distDir, 'index.html'), processedHtml, 'utf8');
 
 // Copy public directory
 if (fs.existsSync(publicDir)) {
