@@ -48,14 +48,8 @@
     "heading": "About Me",
     "paragraph1": "Software developer from Argentina. Currently living in Barcelona, Spain.",
     "paragraph2": "I develop web apps since 2015. During this time, I had the opportunity to work with a broad range of teams, where I was able to use tools and frameworks and deploy them on different cloud platforms successfully.",
-    "paragraph3": "I am currently focused on exploring the AI engineering field using agents workflows and exploring how they can improve my productivity and make me a better engineer, always making focus on keeping a balance between innovation and quality.",
-    "paragraph4": "In my free time, I enjoy playing with my home server and automating stuff around the house.",
-    "motivatingHeading": "Things I find motivating:",
-    "motivations": {
-      "item1": "Coming up with ideas that could be transformed into helpful utilities.",
-      "item2": "Elaborating solutions for challenging technical problems and documenting them the best way I can.",
-      "item3": "Finding ways to improve the UX of the projects I work on."
-    }
+    "paragraph3": "I am currently focused on exploring the AI engineering field using agents for my workflows and exploring how they can improve my productivity and make me a better engineer, always trying to keep a balance between innovation and quality.",
+    "paragraph4": "In my free time, I enjoy playing with my home server and automating stuff around the house."
   },
   "education": {
     "heading": "Education",

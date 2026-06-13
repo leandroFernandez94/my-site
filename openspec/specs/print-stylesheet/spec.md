@@ -41,7 +41,7 @@ Body text color MUST be `#000` for print readability. Section titles SHOULD be r
 
 ### Requirement: Print-Optimized Elements
 
-SVG icons SHOULD remain visible at their current size. The page MUST NOT produce orphaned section titles at the bottom of a page (`page-break-after: avoid` on headings). Large sections SHOULD avoid awkward breaks (`page-break-inside: avoid` where feasible). The `.no-print` class MUST hide the navbar, footer, and any non-essential decorative elements. Glassmorphism effects (backdrop-blur, semi-transparent backgrounds) MUST be neutralized in print.
+SVG icons SHOULD remain visible at their current size. The page MUST NOT produce orphaned section titles at the bottom of a page (`page-break-after: avoid` on headings). Large sections SHOULD avoid awkward breaks (`page-break-inside: avoid` where feasible). The `.no-print` class MUST hide the navbar, footer, and any non-essential decorative elements. Glassmorphism effects (backdrop-blur, semi-transparent backgrounds) MUST be neutralized in print. Experience cards (`.experience-card`) MUST render with a simple border (no shadow, no background) in print.
 (Previously: `<hr>` separator styled for print, no glassmorphism elements to handle)
 
 #### Scenario: Section titles stay with content
@@ -56,3 +56,11 @@ SVG icons SHOULD remain visible at their current size. The page MUST NOT produce
 - WHEN the navbar would normally render
 - THEN backdrop-blur and semi-transparent backgrounds are removed
 - AND the navbar is fully hidden
+
+#### Scenario: Experience cards simplify for print
+
+- GIVEN print media is active
+- WHEN the Experience section renders
+- THEN `.experience-card` elements have no background, no shadow
+- AND a simple 1px border (`#e0e3e5`) is applied
+- AND card content remains readable without visual clutter
