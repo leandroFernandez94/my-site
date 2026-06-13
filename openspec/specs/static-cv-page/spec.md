@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Single-file HTML resume/CV. Vanilla HTML + CSS, no frameworks, no build step, no JavaScript. Visually matches the current Next.js page with added performance and SEO optimizations.
+Single-file HTML resume/CV. Vanilla HTML + CSS, no JavaScript frameworks. Uses a static content template system (content.json + build-time replacement) with Tailwind CSS via CDN. Built with Node.js scripts for development and deployment to Cloudflare Pages.
 
 ## Requirements
 
@@ -48,13 +48,13 @@ The page MUST include a `<footer>` element after `</main>` containing the person
 
 ### Requirement: Content Structure
 
-The page MUST contain the following sections in order: Navigation Bar, Hero (header), About Me, Education (timeline), Experience (timeline), Footer. The Hero MUST use `<header>` with `<h1>` for the name, a subtitle for the job title, a bio paragraph, and social/contact links with SVG icons using `fill="currentColor"`. The `<hr>` divider between header and content MUST be REMOVED. Education and Experience MUST use a timeline layout with a vertical decorative line, dot markers, and numbered bullet items. Each timeline item MUST be wrapped in a container positioned along the vertical line. Timeline content MUST use symmetric left and right padding (`pl-8 pr-8`) so the text column is visually balanced within the section. The vertical line and dot markers retain their existing position anchored to the left padding.
+The page MUST contain the following sections in order: Navigation Bar, Header, About Me, Education (timeline), Experience (card layout), Footer. The Header MUST use `<header>` with `<h1>` for the name, a subtitle for the job title, an address with location and contact links (LinkedIn, GitHub, email), and SVG icons using `fill="currentColor"`. The `<hr>` divider between header and content MUST be REMOVED. Education MUST use a timeline layout with a vertical decorative line, dot markers, and items. Experience MUST use a card layout within timeline item containers (`.experience-card` class) with company name, role, period, and accomplishment items. Each timeline item MUST be wrapped in a container positioned along the vertical line. Timeline content MUST use symmetric left and right padding (`pl-8 pr-8`) so the text column is visually balanced within the section. The vertical line and dot markers retain their existing position anchored to the left padding.
 
-#### Scenario: Full CV renders with new section order
+#### Scenario: Full CV renders with correct section order
 
 - GIVEN a browser loads index.html
 - WHEN the page renders
-- THEN sections appear in order: Navbar, Hero, About Me, Education, Experience, Footer
+- THEN sections appear in order: Navbar, Header, About Me, Education, Experience, Footer
 - AND no `<hr>` element exists between header and content
 
 #### Scenario: Education renders as timeline
@@ -64,12 +64,13 @@ The page MUST contain the following sections in order: Navigation Bar, Hero (hea
 - THEN items display along a vertical line with dot markers
 - AND items use numbered bullets
 
-#### Scenario: Experience renders as timeline
+#### Scenario: Experience renders as cards within timeline
 
 - GIVEN the Experience section
 - WHEN it renders
-- THEN articles display along a vertical line with dot markers
-- AND achievements use numbered bullets
+- THEN articles display within `.experience-card` containers along a vertical timeline
+- AND each card contains company name, role, period, and accomplishment items
+- AND the current role is highlighted with `.timeline-item-accent` class
 
 #### Scenario: Timeline has symmetric horizontal padding
 
@@ -171,3 +172,77 @@ Links MUST have accessible text (visible text or aria-label). Color contrast MUS
 - WHEN a screen reader processes it
 - THEN each item has icon alt text AND visible link text
 - AND LinkedIn and GitHub links have descriptive accessible names
+
+### Requirement: Content Template System
+
+The page MUST use a static content template system where all text, links, and metadata live in `content.json`. The HTML MUST use `{{key.subkey}}` placeholder syntax. A Node.js script (`scripts/replace.js`) MUST perform build-time template replacement: find all placeholders, resolve values from `content.json` using dot notation, and replace them in the HTML. The build output MUST be written to `dist/index.html`. There MUST be no runtime template processing in the browser.
+
+#### Scenario: Content is sourced from JSON
+
+- GIVEN the page source
+- WHEN `content.json` is inspected
+- THEN all text, links, and metadata values are defined in JSON
+- AND the HTML contains only `{{placeholder}}` syntax, no hardcoded text
+
+#### Scenario: Build replaces all placeholders
+
+- GIVEN the build script is run (`npm run build`)
+- WHEN `dist/index.html` is generated
+- THEN no `{{placeholder}}` strings remain in the output
+- AND all content matches the corresponding `content.json` values
+
+#### Scenario: No runtime template overhead
+
+- GIVEN the page is loaded in a browser
+- WHEN the HTML is inspected
+- THEN no template replacement logic executes in the browser
+- AND the page renders with pre-computed static content
+
+### Requirement: Experience Card Layout
+
+The Experience section MUST use `.experience-card` class for each employment entry. Each card MUST contain: company name (`<h3>`), role (`<h4>`), period with `<time>` elements, and accomplishment items. Cards MUST use border (`border-outline-variant/40`), rounded corners (`rounded-lg`), and subtle shadow (`shadow-sm`). The current role MUST be marked with `.timeline-item-accent` class on its parent timeline item (blue dot indicator instead of gray). Multiple positions within the same company MUST be grouped in a single card with sub-sections separated by a top border (`border-t`).
+
+#### Scenario: Experience card renders with all fields
+
+- GIVEN an experience entry
+- WHEN it renders
+- THEN the card displays company name, role, period, and items
+- AND the card has border, rounded corners, and shadow
+
+#### Scenario: Current role is highlighted
+
+- GIVEN the AXA Partners entry (current role)
+- WHEN it renders in the timeline
+- THEN its parent `.timeline-item` has the `.timeline-item-accent` class
+- AND the timeline dot marker is rendered in the accent color (#0051d5)
+
+#### Scenario: Multiple positions within same company
+
+- GIVEN the Devborn entry with multiple positions
+- WHEN it renders
+- THEN a single card contains both positions
+- AND positions are separated by a top border (`border-t`)
+
+### Requirement: Build and Development Workflow
+
+The project MUST provide a Node.js-based build and development workflow. `npm run build` MUST generate `dist/index.html` from `index.html` and `content.json`. `npm run watch` MUST monitor changes to `index.html` and `content.json` and re-run the build on change. `npm run start` MUST start a development server with hot-reload and file watching. The build output directory MUST be `dist/` and MUST be served by Cloudflare Pages.
+
+#### Scenario: Build generates static output
+
+- GIVEN the project is cloned
+- WHEN `npm run build` is executed
+- THEN `dist/index.html` is created with all placeholders replaced
+
+#### Scenario: Watch mode rebuilds on changes
+
+- GIVEN `npm run watch` is running
+- WHEN `index.html` or `content.json` is modified
+- THEN the build script re-runs automatically
+- AND `dist/index.html` is updated
+
+#### Scenario: Dev server serves with hot reload
+
+- GIVEN `npm run start` is running
+- WHEN `index.html` or `content.json` is modified
+- THEN the browser reloads automatically
+- AND the server responds at `http://localhost:3000`

@@ -1,14 +1,23 @@
 schema: spec-driven
 
 project: my-site
-stack: Vanilla HTML5, Tailwind CSS CDN, inline config, print stylesheet, Cloudflare Pages
+stack: Vanilla HTML5, Tailwind CSS CDN, content.json template system, Node.js scripts, Cloudflare Pages
 
 context: |
   Single-file static CV site (index.html) with Tailwind CSS via CDN.
-  No framework, no build tools, no bundler. Custom Node.js dev server.
+  No framework, no bundler. Content template system:
+    - index.html: markup with {{placeholder}} syntax
+    - content.json: text, links, metadata
+    - scripts/replace.js: template logic
+    - scripts/build.js: build script for static deploy
+    - scripts/watch.js: file watcher + rebuild
+    - scripts/server.js: dev server with hot-reload
   Deployed to Cloudflare Pages (leandrofernandez.dev).
   Fonts: Geist, Hanken Grotesk, JetBrains Mono via CDN.
-  E2E tests via custom Playwright runner.
+  E2E tests via custom Playwright runner (scripts/test-runner.js).
+  Experience section uses card layout (not timeline) with .experience-card class.
+  No wrangler.jsonc needed for static Pages deploy.
+  Motivations section removed from UI and content.json (PR #18).
 
 strict_tdd: false
 testing_capabilities:
