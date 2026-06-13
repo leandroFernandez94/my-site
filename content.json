@@ -79,12 +79,25 @@
   },
   "experience": {
     "heading": "Experience",
+    "axaPartners": {
+      "company": "AXA Partners",
+      "project": "Senior Software Developer",
+      "period": {
+        "start": "May 2024",
+        "end": "Present"
+      },
+      "items": {
+        "item1": "Joined the AI champions program and contributed to AI tooling adoption in AXA partners development teams, integrating Github Copilot after receiving training from Microsoft",
+        "item2": "Improved development experience of the team by introducing AI tools to the workflow",
+        "item3": "Continued contributing to the AXA Partners web applications"
+      }
+    },
     "capitole": {
       "company": "Capitole Consulting",
-      "project": "AXA",
+      "project": "AXA Partners(as external contractor)",
       "period": {
         "start": "May 2023",
-        "end": "present day"
+        "end": "May 2024"
       },
       "items": {
         "item1": "Contributed to the frontend of the Axa Partners group of applications, working on a set of React apps customizable for different partners through configuration and internationalization.",
