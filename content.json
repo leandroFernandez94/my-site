@@ -1,0 +1,165 @@
+{
+  "title": "Leandro Fernandez | Web Developer CV",
+  "canonicalUrl": "https://leandrofernandez.dev",
+  "meta": {
+    "description": "Web developer from Argentina based in Barcelona, Spain. Frontend-focused engineer with 5+ years building React and Node.js web applications."
+  },
+  "og": {
+    "title": "Leandro Fernandez | Web Developer CV",
+    "description": "Frontend-focused Web Developer with 5+ years of experience building React + Node.js applications.",
+    "type": "profile",
+    "url": "https://leandrofernandez.dev"
+  },
+  "twitter": {
+    "card": "summary",
+    "title": "Leandro Fernandez | Web Developer CV",
+    "description": "Web developer based in Barcelona with strong frontend and full-stack experience."
+  },
+  "person": {
+    "name": "Leandro Fernandez",
+    "jobTitle": "Web Developer",
+    "email": "leandroofernandezz@gmail.com",
+    "url": "https://leandrofernandez.dev",
+    "sameAs": {
+      "linkedin": "https://www.linkedin.com/in/leandro-fernandez-dev",
+      "github": "https://github.com/leandroFernandez94"
+    },
+    "address": {
+      "locality": "Barcelona",
+      "country": "Spain"
+    }
+  },
+  "nav": {
+    "name": "Leandro Fernandez",
+    "about": "About",
+    "education": "Education",
+    "experience": "Experience",
+    "downloadCv": "Download CV"
+  },
+  "header": {
+    "name": "Leandro Fernandez",
+    "role": "Software developer",
+    "location": "Barcelona, Spain",
+    "email": "leandroofernandezz@gmail.com",
+    "linkedinHandle": "/leandro-fernandez-dev",
+    "githubHandle": "/leandroFernandez94"
+  },
+  "about": {
+    "heading": "About Me",
+    "paragraph1": "Software developer from Argentina. Currently living in Barcelona, Spain.",
+    "paragraph2": "I develop web apps since 2015. During this time, I had the opportunity to work with a broad range of teams, where I was able to use tools and frameworks and deploy them on different cloud platforms successfully.",
+    "paragraph3": "I am currently focused on exploring the AI engineering field using agents workflows and exploring how they can improve my productivity and make me a better engineer, always making focus on keeping a balance between innovation and quality",
+    "motivatingHeading": "Things I find motivating:",
+    "motivations": {
+      "item1": "Coming up with ideas that could be transformed into helpful utilities.",
+      "item2": "Elaborating solutions for challenging technical problems and documenting them the best way I can.",
+      "item3": "Finding ways to improve the UX of the projects I work on."
+    }
+  },
+  "education": {
+    "heading": "Education",
+    "intro": "Currently focused on applying to courses and workshops to keep myself updated in terms of new technologies that can help me become a better engineer.",
+    "utn": {
+      "prefix": "Systems Engineering at",
+      "linkText": "UTN",
+      "startYear": "2013",
+      "endPrefix": " - dropped in",
+      "endYear": "2018",
+      "endSuffix": "."
+    },
+    "technician": {
+      "prefix": "Computer Technician at E.T. 35 D.E. 18 Ing. Eduardo Latzina,",
+      "startYear": "2008",
+      "endPrefix": " -",
+      "endYear": "2013",
+      "endSuffix": "."
+    },
+    "languages": "Languages: Spanish (native), English: B2 certificate, conversational level."
+  },
+  "experience": {
+    "heading": "Experience",
+    "capitole": {
+      "company": "Capitole Consulting",
+      "project": "AXA",
+      "period": {
+        "start": "May 2023",
+        "end": "present day"
+      },
+      "items": {
+        "item1": "Contributed to the frontend of the Axa Partners group of applications, working on a set of React apps customizable for different partners through configuration and internationalization.",
+        "item2": "Worked on the integration of PWA support for the apps.",
+        "item3": "Gained experience in the Azure cloud platform working on configurations for deployment pipelines and different automatization scripts."
+      }
+    },
+    "devborn": {
+      "company": "Devborn",
+      "fabfitfun": {
+        "name": "FabFitFun",
+        "period": {
+          "start": "January 2023",
+          "end": "April 2023"
+        },
+        "items": {
+          "item1": "Working remotely with the web team on an ecommerce platform that sells seasonal boxes of beauty, wellness, fashion, and fitness products.",
+          "item2": "Improve integration of A/B testing using Optimizely."
+        }
+      },
+      "sibly": {
+        "name": "Sibly",
+        "period": {
+          "start": "February 2021",
+          "end": "December 2022"
+        },
+        "items": {
+          "item1": "First experience working remotely with an international team.",
+          "item2": "Replatform: Accomplished a project to refactor an old jquery web app into a new React dashboard.",
+          "item3": "Improved performance and code reliability issues adding typescript to the project.",
+          "item4": "Added jest unit tests to improve code coverage on both components and Store logic.",
+          "item5": "Developed new features working alongside product and designers team.",
+          "item6": "Dealt with complex challenges related to websockets and messaging events using sendbird SDK.",
+          "item7": "Worked on timezone dependant features for a webapp used by people in different zones of the world.",
+          "item8": "Lead the development of a new web platform for users of sibly.",
+          "item9": "Experience using an AWS setup with s3 and cloudfront."
+        }
+      }
+    },
+    "bons": {
+      "company": "Bons",
+      "period": {
+        "start": "October 2018",
+        "end": "January 2021"
+      },
+      "items": {
+        "item1Prefix": "Frontend development of Produck (",
+        "item1LinkText": "https://www.produck.io/",
+        "item1Suffix": ") Progressive web app built with React and connected to a backend using graphQL query language.",
+        "item2": "Implemented performance improvements to a React app that has complex components connected to a very large state using the apollo graphQL client while also considering optimistic results and caching strategies.",
+        "item3": "Developed a web push notifications feature for produck's webapp notifications system.",
+        "item4Prefix": "Developed react and vuejs web apps integrated to webflow (",
+        "item4LinkText": "https://webflow.com/",
+        "item4Suffix": ") for many of Bons clients. Using a custom stack with nodeJS + airtable + mongoDB in the backend served by a Vercel serverless BE."
+      }
+    },
+    "despegar": {
+      "company": "Despegar.com",
+      "period": {
+        "start": "August 2015",
+        "end": "October 2018"
+      },
+      "items": {
+        "item1": "Received training during \"Alto Vuelo\" course imparted by leaders of backend, frontend and mobile teams.",
+        "item2": "Development of REST APIs written in JAVA, SCALA and node.js.",
+        "item3": "Development of user interfaces powered by angularjs and React."
+      }
+    }
+  },
+  "footer": {
+    "name": "Leandro Fernandez",
+    "copyright": "© 2026 Leandro Fernandez. All rights reserved.",
+    "links": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "email": "Email"
+    }
+  }
+}
