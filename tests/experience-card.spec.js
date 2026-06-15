@@ -61,3 +61,25 @@ test('Card chrome returns at breakpoint boundary after resize to 768px', async (
   expect(desktopStyles.boxShadow).not.toBe('none');
   expect(desktopStyles.paddingTop).toBeGreaterThan(0);
 });
+
+test('Current role is highlighted', async ({ page }) => {
+  const axaItem = page.locator('.timeline-item-accent').first();
+  await expect(axaItem).toBeVisible();
+  await expect(axaItem).toHaveClass(/timeline-item-accent/);
+
+  const dotColor = await axaItem.evaluate((el) => {
+    return window.getComputedStyle(el, '::before').backgroundColor;
+  });
+  expect(dotColor).toBe('rgb(0, 81, 213)');
+});
+
+test('Multiple positions within same company are grouped', async ({ page }) => {
+  const devbornCard = page.locator('.experience-card:has-text("Devborn")');
+  await expect(devbornCard).toBeVisible();
+
+  const positions = devbornCard.locator('h4');
+  await expect(positions).toHaveCount(2);
+
+  const separator = devbornCard.locator('.border-t');
+  await expect(separator).toBeVisible();
+});
