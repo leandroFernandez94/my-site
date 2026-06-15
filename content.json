@@ -8,12 +8,18 @@
     "title": "Leandro Fernandez | Web Developer CV",
     "description": "Web developer based in Barcelona",
     "type": "profile",
-    "url": "https://leandrofernandez.dev"
+    "url": "https://leandrofernandez.dev",
+    "image": "https://leandrofernandez.dev/public/og.png",
+    "imageWidth": "1200",
+    "imageHeight": "630",
+    "imageAlt": "Leandro Fernandez - Software Developer Resume"
   },
   "twitter": {
-    "card": "summary",
+    "card": "summary_large_image",
     "title": "Leandro Fernandez | Web Developer CV",
-    "description": "Web developer based in Barcelona"
+    "description": "Web developer based in Barcelona",
+    "image": "https://leandrofernandez.dev/public/og.png",
+    "imageAlt": "Leandro Fernandez - Software Developer Resume"
   },
   "person": {
     "name": "Leandro Fernandez",
