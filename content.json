@@ -1,11 +1,11 @@
 {
-  "title": "Leandro Fernandez | Web Developer CV",
+  "title": "Leandro Fernandez | Web Developer Resume",
   "canonicalUrl": "https://leandrofernandez.dev",
   "meta": {
     "description": "Web developer from Argentina based in Barcelona, Spain. Frontend-focused engineer with 5+ years building React and Node.js web applications."
   },
   "og": {
-    "title": "Leandro Fernandez | Web Developer CV",
+    "title": "Leandro Fernandez | Web Developer Resume",
     "description": "Web developer based in Barcelona",
     "type": "profile",
     "url": "https://leandrofernandez.dev",
@@ -16,7 +16,7 @@
   },
   "twitter": {
     "card": "summary_large_image",
-    "title": "Leandro Fernandez | Web Developer CV",
+    "title": "Leandro Fernandez | Web Developer Resume",
     "description": "Web developer based in Barcelona",
     "image": "https://leandrofernandez.dev/public/og.png",
     "imageAlt": "Leandro Fernandez - Software Developer Resume"
