@@ -181,6 +181,10 @@
       }
     }
 
+    .print-only {
+      display: none;
+    }
+
     @media print {
       @page {
         margin: 1.5cm;
@@ -225,6 +229,14 @@
       /* Hide header links section */
       header address {
         display: none !important;
+      }
+
+      /* Print-only contact line (email + GitHub) */
+      .print-only {
+        display: block !important;
+        text-align: center;
+        margin-top: 0.5rem;
+        font-size: 0.85rem;
       }
 
       /* Compact header */
@@ -420,6 +432,10 @@
           </li>
         </ul>
       </address>
+
+      <p class="print-only">
+        {{header.email}} · {{header.githubUrl}}
+      </p>
     </header>
 
     <section id="about" class="scroll-mt-28 mx-auto mb-8 md:mb-12 lg:mb-16 max-w-[1100px] space-y-4">
